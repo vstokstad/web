@@ -45,8 +45,6 @@ export const SEO = ({
 		},
 		"sameAs": [
 			"${socialLinks.twitter}",
-			"${socialLinks.google}",
-			"${socialLinks.youtube}",
 			"${socialLinks.linkedin}",
 			"${socialLinks.instagram}",
 			"${socialLinks.github}"
