@@ -1,0 +1,11 @@
+<component name="libraryTable">
+  <library name="node.js core latest" type="javaScript">
+    <properties>
+      <option name="frameworkName" value="Node.js Core Modules" />
+      <option name="frameworkVersion" value="" />
+    </properties>
+    <CLASSES />
+    <JAVADOC />
+    <SOURCES />
+  </library>
+</component>
