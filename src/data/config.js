@@ -28,5 +28,4 @@ module.exports = {
     phone: '+46735019539',
   },
   foundingDate: '2020',
-  recaptcha_key: '6LftVPUZAAAAAIwqTEu14G3I4gUVmE33M_HoFZLW',
 };

@@ -17,7 +17,7 @@ export const Intro = () => (
 				</Button>
 			</Details>
 			<Thumbnail>
-				<img src={dev} alt="Villhelm Stokstad is a Game Developer and programmer " />
+				<img src={dev} alt="Villhelm Stokstad is a Game Developer and programmer" />
 			</Thumbnail>
 		</IntroWrapper>
 	</Wrapper>
