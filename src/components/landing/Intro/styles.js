@@ -10,7 +10,7 @@ export const Wrapper = styled.div`
 `;
 
 export const IntroWrapper = styled.div`
-  padding: 4rem 0;
+  padding: 2rem 0;
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -59,5 +59,6 @@ export const Thumbnail = styled.div`
 
   img {
     width: 100%;
+    float: right;
   }
 `;

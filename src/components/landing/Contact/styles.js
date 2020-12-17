@@ -1,21 +1,33 @@
 import styled from 'styled-components';
-
+import contactOverlayIllustration from 'assets/illustrations/contact-overlay.svg';
 export const Wrapper = styled.div`
+  background-image: url(${contactOverlayIllustration});
+  background-size: contain;
+  background-position: right;
+  background-repeat: no-repeat;
+  
+  @media (max-width: 960px) {
+    flex-direction: column;
+  }
+`;
+export const ContactWrapper = styled.div`
   padding: 4rem 0;
   display: flex;
   align-items: flex-start;
   justify-content: space-between;
 
+  
   @media (max-width: 960px) {
     flex-direction: column;
   }
 `;
-
 export const Details = styled.div`
   flex: 1;
-  padding-right: 2rem;
+  padding-left: 1rem;
+  padding-right: 1rem;
 
   @media (max-width: 960px) {
+    padding-left: unset;
     padding-right: unset;
     width: 100%;
     order: 1;
@@ -41,10 +53,12 @@ export const Thumbnail = styled.div`
 
   @media (max-width: 960px) {
     width: 100%;
-    margin-bottom: 2rem;
+
   }
 
   img {
+
     width: 100%;
+    margin-top: 2rem;
   }
 `;

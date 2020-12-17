@@ -10,5 +10,12 @@
     "name": "Twitter",
     "link": "https://twitter.com/vstokstad",
     "icon": "/icons/twitter.svg"
+  },
+  {
+    "id": 2,
+    "name": "LinkedIn",
+    "link": "https://www.linkedin.com/in/vilhelmstokstad/",
+    "icon": "/icons/linkedin.svg"
   }
+
 ]

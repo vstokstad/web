@@ -20,5 +20,6 @@ export const Intro = () => (
 				<img src={dev} alt="Villhelm Stokstad is a Game Developer and programmer" />
 			</Thumbnail>
 		</IntroWrapper>
+
 	</Wrapper>
 )

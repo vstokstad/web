@@ -35,13 +35,6 @@ module.exports = {
       },
     },
     {
-      resolve: 'gatsby-plugin-google-analytics',
-      options: {
-        trackingId: config.googleAnalyticsID,
-        head: true,
-      },
-    },
-    {
       resolve: 'gatsby-plugin-favicon',
       options: {
         logo: './static/favicon/favicon-512.png',
