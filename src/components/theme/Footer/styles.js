@@ -1,7 +1,8 @@
 import footerIllustration from 'assets/illustrations/footer.svg';
 import styled from 'styled-components';
 
-export const Wrapper = styled.div`
+export let Wrapper;
+Wrapper = styled.div`
   padding: 28rem 0 4rem 0;
   background-image: url(${footerIllustration});
   background-size: cover;

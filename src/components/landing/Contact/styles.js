@@ -1,6 +1,8 @@
 import styled from 'styled-components';
-import contactOverlayIllustration from 'assets/illustrations/contact-overlay.svg';
-export const Wrapper = styled.div`
+import contactOverlayIllustration from "assets/illustrations/contact-overlay.svg";
+
+export let Wrapper;
+Wrapper = styled.div`
   background-image: url(${contactOverlayIllustration});
   background-size: contain;
   background-position: right;
