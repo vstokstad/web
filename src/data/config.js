@@ -1,6 +1,6 @@
 module.exports = {
   defaultTitle: 'Vilhelm Stokstad',
-  logo: 'https://portfolio.smakosh.com/favicon/favicon-512.png',
+  logo: 'favicon/favicon-512.svg',
   author: 'Vilhelm Stokstad',
   url: 'https://vilhelmstokstad.com',
   legalName: 'Vilhelm Stokstad',
@@ -14,7 +14,7 @@ module.exports = {
   themeColor: '#6b63ff',
   backgroundColor: '#6b63ff',
   social: {
-  facebook: 'appId',
+  facebook: 'appID',
   twitter: '@vstokstad',
   },
   address: {
