@@ -1,0 +1,56 @@
+==================================================================
+https://keybase.io/vstokstad
+--------------------------------------------------------------------
+
+I hereby claim:
+
+  * I am an admin of https://www.vilhelmstokstad.com
+  * I am vstokstad (https://keybase.io/vstokstad) on keybase.
+  * I have a public key ASAXsLnrZ6U6LKK00H4Vxtncvpj9dfo17IynpsiHB7iY5Qo
+
+To do so, I am signing this object:
+
+{
+  "body": {
+    "key": {
+      "eldest_kid": "012017b0b9eb67a53a2ca2b4d07e15c6d9dcbe98fd75fa35ec8ca7a6c88707b898e50a",
+      "host": "keybase.io",
+      "kid": "012017b0b9eb67a53a2ca2b4d07e15c6d9dcbe98fd75fa35ec8ca7a6c88707b898e50a",
+      "uid": "90a72396964abe804ab481778911c019",
+      "username": "vstokstad"
+    },
+    "merkle_root": {
+      "ctime": 1610004117,
+      "hash": "76e429455b64c077953a5f0ff5f61365a9c4001a7fa2e242139babf8309d6a50937b6f7552da588a67a21115a8a9d922d79f80c3d379fc4278213b3f0374bc36",
+      "hash_meta": "371f7c17339f011e04c99811dc0119669aba04a58c92c59d63ac5a2165a4dc39",
+      "seqno": 18622992
+    },
+    "service": {
+      "entropy": "iPjslWA5GjAtefonJjLUzWkG",
+      "hostname": "www.vilhelmstokstad.com",
+      "protocol": "https:"
+    },
+    "type": "web_service_binding",
+    "version": 2
+  },
+  "client": {
+    "name": "keybase.io go client",
+    "version": "5.5.0"
+  },
+  "ctime": 1610004182,
+  "expire_in": 504576000,
+  "prev": "f18d86ccdc6ad6e549e4a9bd8fbfae7478a19e71d9296269be2cec600e090512",
+  "seqno": 16,
+  "tag": "signature"
+}
+
+which yields the signature:
+
+hKRib2R5hqhkZXRhY2hlZMOpaGFzaF90eXBlCqNrZXnEIwEgF7C562elOiyitNB+FcbZ3L6Y/XX6NeyMp6bIhwe4mOUKp3BheWxvYWTESpcCEMQg8Y2GzNxq1uVJ5Km9j7+udHihnnHZKWJpvizsYA4JBRLEICuOv/g+Z04DLyDOhbyoO7yXI4eSIZpXCyEwJ/Z9/0TcAgHCo3NpZ8RAg+H8rWKz6TCrz1WBdxIw8uAvpY4P2Jhy/Mnu3A6LCbYBmvmuV3aWJeCTJz25yhDp0Y7PnEjdDgdFyeF4tC2SD6hzaWdfdHlwZSCkaGFzaIKkdHlwZQildmFsdWXEIDGma9f5RTE2yMrNiR00A/jG3o9A8FqU8YVUqX78cv2po3RhZ80CAqd2ZXJzaW9uAQ==
+
+And finally, I am proving ownership of this host by posting or
+appending to this document.
+
+View my publicly-auditable identity here: https://keybase.io/vstokstad
+
+==================================================================
