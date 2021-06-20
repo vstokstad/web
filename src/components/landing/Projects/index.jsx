@@ -40,7 +40,7 @@ export const Projects = () => {
                 </p>
 
                 <Thumbnail>
-                  <iframe width='100%' height='315' src='https://www.youtube-nocookie.com/embed/J_kOex71fDo'
+                  <iframe title={"Bubble Evolution"} width='100%' height='315' src='https://www.youtube-nocookie.com/embed/J_kOex71fDo'
                           frameBorder='0'
                           allow='accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture'
                           allowFullScreen />

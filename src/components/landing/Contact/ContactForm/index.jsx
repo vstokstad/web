@@ -8,8 +8,7 @@ const ContactForm = ({ setFieldValue, isSubmitting, values, errors, touched }) =
   <Form
     name="portfolio-dev"
     method="post"
-    data-netlify="true"
-    data-netlify-honeypot="bot-field"
+
   >
     <InputField>
       <Input

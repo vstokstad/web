@@ -16,6 +16,7 @@ module.exports = {
   social: {
   facebook: 'appID',
   twitter: '@vstokstad',
+    github: 'vstokstad',
   },
   address: {
   city: 'Stockholm',

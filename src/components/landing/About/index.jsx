@@ -11,7 +11,7 @@ export const About = () => (
       <Details>
         <h1>Game Developer</h1>
         <p>
-          I am a junior game developer, mainly working in C# and C++ but also have experience with swift and some web development.
+          I am a junior game developer, mainly working in C++ (Unreal) and C# (Unity) but also have experience with swift and some web development.
         </p>
         <Button as={AnchorLink} href="#contact">
          Contact
