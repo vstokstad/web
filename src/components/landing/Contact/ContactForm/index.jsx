@@ -6,9 +6,9 @@ import { Error, Center, InputField } from './styles';
 
 const ContactForm = ({ setFieldValue, isSubmitting, values, errors, touched }) => (
   <Form
-    name="portfolio-dev"
-    method="post"
-
+    name="Contact"
+    method="POST"
+    action="https://getform.io/f/570b4aa7-9d04-490f-a87f-6c5d42c68720"
   >
     <InputField>
       <Input
@@ -58,7 +58,7 @@ const ContactForm = ({ setFieldValue, isSubmitting, values, errors, touched }) =
       </InputField>
     )}
     <Center>
-      <Button secondary type="submit" disabled={isSubmitting}>
+      <Button secondary type="submit" name="submit" disabled={isSubmitting}>
         Submit
       </Button>
     </Center>
@@ -84,16 +84,17 @@ export default withFormik({
         Object.keys(data)
           .map((key) => `${encodeURIComponent(key)}=${encodeURIComponent(data[key])}`)
           .join('&');
-      await fetch('/?no-cache=1', {
+      await fetch('https://getform.io/f/570b4aa7-9d04-490f-a87f-6c5d42c68720', {
         method: 'POST',
+        action: 'https://getform.io/f/570b4aa7-9d04-490f-a87f-6c5d42c68720',
         headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
         body: encode({
-          'form-name': 'portfolio-dev',
+          'form-name': 'Contact',
           name,
           email,
           message,
         }),
-      });
+      }).then(r=>console.log("Success form send."));
       await setSubmitting(false);
       await setFieldValue('success', true);
       setTimeout(() => resetForm(), 2000);

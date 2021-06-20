@@ -1,7 +1,7 @@
 {
-  "name": "portfolio",
+  "name": "vilhelmstokstad.com",
   "private": true,
-  "description": "my humble domain",
+  "description": "web - vilhelmstokstad.com",
   "version": "0.0.2",
   "author": "vstokstad <v.stokstad@gmal.com>",
   "dependencies": {
