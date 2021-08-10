@@ -7,7 +7,10 @@ Wrapper = styled.div`
   background-size: contain;
   background-position: right;
   background-repeat: no-repeat;
-  
+	
+  .grecaptcha-badge {
+    display: none;
+  }
   @media (max-width: 960px) {
     flex-direction: column;
   }

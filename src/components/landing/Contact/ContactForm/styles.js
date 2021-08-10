@@ -6,7 +6,9 @@ export const Error = styled.span`
 
 export const Center = styled.div`
   text-align: left;
-
+  .grecaptcha-badge {
+    display: none;
+  }
   h4 {
     font-weight: normal;
   }

@@ -1,95 +1,126 @@
 import React from 'react';
-import { Form, withFormik, FastField, ErrorMessage } from 'formik';
+import { ErrorMessage, FastField, Form, withFormik } from 'formik';
 import * as Yup from 'yup';
 import { Button, Input } from 'components/common';
-import { Error, Center, InputField } from './styles';
+import { Center, Error, InputField } from './styles';
+import 'react-google-recaptcha-v3';
+import ReCaptcha from '@pittica/gatsby-plugin-recaptcha';
 
-const ContactForm = ({ setFieldValue, isSubmitting, values, errors, touched }) => (
-  <Form
-    name='Contact'
-    method='POST'
-    action='https://getform.io/f/570b4aa7-9d04-490f-a87f-6c5d42c68720'
-  >
-    <InputField>
-      <Input
-        as={FastField}
-        type='text'
-        name='name'
-        component='input'
-        aria-label='name'
-        placeholder='Full name*'
-        error={touched.name && errors.name}
-      />
-      <ErrorMessage component={Error} name='name' />
-    </InputField>
-    <InputField>
-      <Input
-        id='email'
-        aria-label='email'
-        component='input'
-        as={FastField}
-        type='email'
-        name='email'
-        placeholder='Email*'
-        error={touched.email && errors.email}
-      />
-      <ErrorMessage component={Error} name='email' />
-    </InputField>
-    <InputField>
-      <Input
-        as={FastField}
-        component='textarea'
-        aria-label='message'
-        id='message'
-        rows='8'
-        type='text'
-        name='message'
-        placeholder='Message*'
-        error={touched.message && errors.message}
-      />
-      <ErrorMessage component={Error} name='message' />
-    </InputField>
 
-    {values.success && (
+const ContactForm = ({ isSubmitting, values, errors, touched }) => {
+  //
+  // window.grecaptcha.ready(function() {
+  //     window.grecaptcha.execute('YOUR_SITE_KEY', { action: 'homepage' })
+  //       .then(function(token) {
+  //         document.getElementById('captchaResponse').value = token;
+  //       });
+  //   });
+
+
+  return <>
+    <Form
+      name='Contact'
+      method='POST'
+      action='https://getform.io/f/570b4aa7-9d04-490f-a87f-6c5d42c68720'
+      id='ContactForm'
+    >
       <InputField>
-        <Center>
-          <h4>Your message has been successfully sent, I will get back to you ASAP!</h4>
-        </Center>
+        <Input
+          as={FastField}
+          type='text'
+          name='name'
+          component='input'
+          aria-label='name'
+          placeholder='Full name*'
+          error={touched.name && errors.name}
+        />
+        <ErrorMessage component={Error} name='name' />
       </InputField>
-    )}
-    <Center>
-      <Input type='hidden' id='captchaResponse' name='g-recaptcha-response' />
-      <Button secondary type='submit' name='submit' disabled={isSubmitting}>
-        Submit
-      </Button>
-    </Center>
-  </Form>
-);
+      <InputField>
+        <Input
+          id='email'
+          aria-label='email'
+          component='input'
+          as={FastField}
+          type='email'
+          name='email'
+          placeholder='Email*'
+          error={touched.email && errors.email}
+        />
+        <ErrorMessage component={Error} name='email' />
+      </InputField>
+      <InputField>
+        <Input
+          as={FastField}
+          component='textarea'
+          aria-label='message'
+          id='message'
+          rows='8'
+          type='text'
+          name='message'
+          placeholder='Message*'
+          error={touched.message && errors.message}
+        />
+        <ErrorMessage component={Error} name='message' />
+      </InputField>
+      <InputField>
+        <Input type='hidden' id='captchaResponse' name='g-recaptcha-response' />
+      </InputField>
+        <ReCaptcha action={'https://getform.io/f/570b4aa7-9d04-490f-a87f-6c5d42c68720'} sitekey={"6LftVPUZAAAAAIwqTEu14G3I4gUVmE33M_HoFZLW"} id={"gcaptchaResponse"}/>
+
+      {values.success && <InputField>
+        <Center>
+          <h4>
+            Your message has been successfully sent, I will get back to you
+            ASAP!
+          </h4>
+        </Center>
+      </InputField>}
+      <Center>
+        <Button
+          secondary
+          class='g-recaptcha'
+          data-sitekey='6LftVPUZAAAAAIwqTEu14G3I4gUVmE33M_HoFZLW'
+          action="submit"
+          disabled={isSubmitting}
+        >
+          Submit
+        </Button>
+      </Center>
+    </Form>
+  </>;
+};
+
 
 export default withFormik({
+
   mapPropsToValues: () => ({
     name: '',
     email: '',
     message: '',
     success: false,
   }),
-  validationSchema: () =>
-    Yup.object().shape({
-      name: Yup.string().required('Full name field is required'),
-      email: Yup.string().email('Invalid email').required('Email field is required'),
+
+  validationSchema: () => {
+    return Yup.object().shape({
+      name: Yup.string().required(`Full name field is required`),
+      email: Yup.string()
+        .email('Invalid email')
+        .required('Email field is required'),
       message: Yup.string().required('Message field is required'),
-    }),
-  handleSubmit: async ({ name, email, message }, { setSubmitting, resetForm, setFieldValue }) => {
-    grecaptcha.ready(function() {
-      grecaptcha.execute('6LftVPUZAAAAAIwqTEu14G3I4gUVmE33M_HoFZLW', {action: 'homepage'})
-        .then(function(token) {
-          document.getElementById('captchaResponse').value = token;
-        });
     });
+  },
+
+  handleSubmit: async ({ name, email, message, e },
+                       { setSubmitting, resetForm, setFieldValue }) => {
+
     try {
       const encode = (data) =>
         Object.keys(data)
-          .map((key) => `${encodeURIComponent(key)}=${encodeURIComponent(data[key])}`)
+          .map(
+            (key) =>
+              `${encodeURIComponent(key)}=${encodeURIComponent(data[key])}`,
+          )
           .join('&');
       await fetch('https://getform.io/f/570b4aa7-9d04-490f-a87f-6c5d42c68720', {
         method: 'POST',
@@ -101,7 +132,8 @@ export default withFormik({
           email,
           message,
         }),
-      }).then(r => console.log('Success form send.'));
+      }).then((r) => console.log('Success form send.'));
+
       await setSubmitting(false);
       await setFieldValue('success', true);
       setTimeout(() => resetForm(), 2000);
