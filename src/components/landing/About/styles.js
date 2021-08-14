@@ -1,5 +1,5 @@
 import styled from 'styled-components';
-import detailsIllustration from 'assets/illustrations/details.svg';
+import detailsIllustration from '../../../assets/illustrations/details.svg';
 
 export let Wrapper;
 Wrapper = styled.div`

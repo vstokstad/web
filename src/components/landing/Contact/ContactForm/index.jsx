@@ -1,7 +1,7 @@
 import React from 'react';
 import { ErrorMessage, FastField, Form, withFormik } from 'formik';
 import * as Yup from 'yup';
-import { Button, Input } from 'components/common';
+import { Button, Input } from '../../../common';
 import { Center, Error, InputField } from './styles';
 import 'react-google-recaptcha-v3';
 import ReCaptcha from '@pittica/gatsby-plugin-recaptcha';
@@ -66,7 +66,7 @@ const ContactForm = ({ isSubmitting, values, errors, touched }) => {
       <InputField>
         <Input type='hidden' id='captchaResponse' name='g-recaptcha-response' />
       </InputField>
-        <ReCaptcha action={'https://getform.io/f/570b4aa7-9d04-490f-a87f-6c5d42c68720'} sitekey={"6LftVPUZAAAAAIwqTEu14G3I4gUVmE33M_HoFZLW"} id={"gcaptchaResponse"}/>
+        <ReCaptcha action={'https://getform.io/f/570b4aa7-9d04-490f-a87f-6c5d42c68720'} sitekey={"6LftVPUZAAAAAIwqTEu14G3I4gUVmE33M_HoFZLW"} id={"captchaResponse"}/>
 
       {values.success && <InputField>
         <Center>

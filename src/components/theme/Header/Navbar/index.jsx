@@ -1,6 +1,6 @@
 import React from 'react'
 import { Link } from 'gatsby'
-import { Container } from 'components/common'
+import { Container } from '../../../common'
 import NavbarLinks from '../NavbarLinks'
 import { Wrapper } from './styles'
 

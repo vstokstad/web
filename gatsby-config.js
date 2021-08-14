@@ -5,6 +5,10 @@ require('dotenv').config({
 });
 
 module.exports = {
+  flags: {
+    THE_FLAG: true,
+    FAST_DEV: true,
+  },
   siteMetadata: {
     title: config.defaultTitle,
     description: config.defaultDescription,
@@ -12,6 +16,17 @@ module.exports = {
   },
   plugins: [
     'gatsby-plugin-react-helmet',
+    {
+      resolve: `gatsby-plugin-sass`,
+      options: {
+        cssLoaderOptions: {
+          esModule: false,
+          modules: {
+            namedExport: false,
+          },
+        },
+      },
+    },
     'gatsby-plugin-styled-components',
     'gatsby-transformer-sharp',
     'gatsby-plugin-sharp',

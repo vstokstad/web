@@ -1,7 +1,7 @@
 import React from 'react';
 import AnchorLink from 'react-anchor-link-smooth-scroll';
-import { Button, Container } from 'components/common';
-import contact from 'assets/illustrations/contact.svg';
+import { Button, Container } from '../../common';
+import contact from '../../../assets/illustrations/contact.svg';
 import { Details, Recipe, SkillsWrapper, Thumbnail, Wrapper } from './styles';
 
 export const About = () => (

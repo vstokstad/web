@@ -1,5 +1,5 @@
 import styled from 'styled-components';
-import overlayIllustration from 'assets/illustrations/overlay.svg';
+import overlayIllustration from '../../../assets/illustrations/overlay.svg';
 
 export let Wrapper;
 Wrapper = styled.div`

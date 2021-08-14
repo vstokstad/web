@@ -6,7 +6,7 @@ module.exports = {
   legalName: 'Vilhelm Stokstad',
   defaultDescription: 'I’m Vilhelm and I’m a game developer',
   socialLinks:{
-  twitter: 'http://www.twitter.com/vstokstad',
+  twitter: 'https://www.twitter.com/vstokstad',
   github: 'https://github.com/vstokstad',
   linkedin: 'https://www.linkedin.com/in/vilhelmstokstad/',
   instagram: 'https://instagram.com/vstokstad'

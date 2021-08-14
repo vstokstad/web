@@ -1,8 +1,8 @@
 import React from 'react'
-import { Container } from 'components/common'
-import skills from 'assets/illustrations/skills.svg'
 import { Wrapper, Details, Thumbnail, ContactWrapper } from './styles'
 import ContactForm from './ContactForm'
+import skills from '../../../assets/illustrations/skills.svg'
+import { Container } from '../../common';
 
 export const Contact = () => (
   <Wrapper id="contact">
