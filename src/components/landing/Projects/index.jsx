@@ -31,18 +31,26 @@ export const Projects = () => {
 				<Grid>
 					{data.all.nodes.map((node) => {
 						let project = node.frontmatter;
+						let thumbnail;
+						if (project.video !== null) {
+							thumbnail = <iframe title={project.title} width='100%' height='315'
+							                        src={project.video}
+							                        frameBorder='0'
+							                        allow='accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture'
+							                        allowFullScreen />;
+
+						} else {
+							thumbnail = <img src={project.img} alt={project.title}/>
+						}
 						return (
-							<Item><Card>
-								<Content>
-									<h4>{project.title}</h4>
-									<Thumbnail>
-										<iframe title={project.title} width='100%' height='315'
-										        src={project.video}
-										        frameBorder='0'
-										        allow='accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture'
-										        allowFullScreen />
-									</Thumbnail>
-									<p>{project.description}</p>
+						<Item><Card>
+							<Content>
+								<h4>{project.title}</h4>
+								<Thumbnail>
+									{thumbnail}
+
+								</Thumbnail>
+								<p>{project.description}</p>
 
 								</Content>
 								<Stats>
