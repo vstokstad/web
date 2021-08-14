@@ -11,7 +11,7 @@ export const About = () => (
       <Details>
         <h1>Game Developer</h1>
         <p>
-          I am a mainly a gameplay programmer, mainly working in C++ (Unreal) and C# (Unity) but also have experience
+          I am a gameplay programmer, mainly working in C++ (Unreal) and C# (Unity). I also have experience
           with swift (iOS) and Javascript/TypeScript web development.
         </p>
         <Recipe>

@@ -15,7 +15,14 @@ module.exports = {
     'gatsby-plugin-styled-components',
     'gatsby-transformer-sharp',
     'gatsby-plugin-sharp',
-
+    {
+      resolve: `gatsby-source-filesystem`,
+      options: {
+        name: `projects`,
+        path: `${__dirname}/src/components/landing/Projects/Project`,
+      },
+    },
+    'gatsby-transformer-remark',
     {
       resolve: 'gatsby-source-graphql',
       options: {

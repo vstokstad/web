@@ -60,11 +60,6 @@ export const Stats = styled.div`
     &:first-child {
       margin-right: 0.5rem;
     }
-
-    img {
-      margin: 0;
-    }
-
     span {
       color: #000;
       margin-left: 0.5rem;
