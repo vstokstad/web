@@ -1,14 +1,9 @@
 const config = require('./src/data/config');
-
 require('dotenv').config({
-  path: `.env.${process.env.NODE_ENV}`,
+path: `.env.${process.env.NODE_ENV}`,
 });
 
 module.exports = {
-  flags: {
-    THE_FLAG: true,
-    FAST_DEV: true,
-  },
   siteMetadata: {
     title: config.defaultTitle,
     description: config.defaultDescription,
@@ -20,7 +15,7 @@ module.exports = {
       resolve: `gatsby-plugin-sass`,
       options: {
         cssLoaderOptions: {
-          esModule: false,
+          esModule: true,
           modules: {
             namedExport: false,
           },
