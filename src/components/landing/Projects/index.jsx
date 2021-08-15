@@ -2,7 +2,6 @@ import React from 'react';
 import { Content, Grid, Item, Stats, Thumbnail, Wrapper } from './styles';
 import { graphql, useStaticQuery } from 'gatsby';
 import { Card, Container } from '../../common';
-import { string } from 'prop-types';
 
 
 export const Projects = () => {
@@ -33,7 +32,7 @@ export const Projects = () => {
 					{data.all.nodes.map((node) => {
 						let project = node.frontmatter;
 						let thumbnail;
-						if (project.video !== string.url) {
+						if (project.video !== null) {
 							thumbnail = <iframe title={project.title} width='100%' height='315'
 							                        src={project.video}
 							                        frameBorder='0'
