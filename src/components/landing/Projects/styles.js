@@ -6,7 +6,7 @@ export const Wrapper = styled.div`
 
 export const Grid = styled.div`
   display: grid;
-  align-items: center;
+  align-items: start;
   grid-template-columns: repeat(2, 1fr);
   grid-template-rows: 8fr;
   gap: 1.2rem 1.2rem;
@@ -22,11 +22,43 @@ export const Grid = styled.div`
 
 export const Item = styled.div`
   width: 100%;
-  height: 100%;
+  height: available;
   overflow: hidden;
   box-shadow: 0 1px 6px 0 rgba(0, 0, 0, 0.11);
 
-  h4 {
+  :hover {
+    width: 100%;
+    box-shadow: 0 4px 24px 0 rgba(0, 0, 0, 0.11);
+    cursor: pointer;
+	  transform: scale(1.002);
+
+    h2 {
+      transform: scale(1.2);
+    }
+
+    h3 {
+      color: #1c1c1c;
+    }
+  }
+
+  div {
+    .more {
+      display: none;
+    }
+
+    .less {
+      display: inherit;
+      
+    }
+  }
+
+
+  h3 {
+    color: #212121;
+  }
+
+  h2 {
+    float: right;
     color: #212121;
   }
 
@@ -37,10 +69,22 @@ export const Item = styled.div`
 
 export const Content = styled.div`
   padding: 1rem 0;
+
+  p {
+    display: block;
+    margin-right: 0.5rem;
+    padding-bottom: 0.2rem;
+	  text-align: justify;
+	  
+	  
+  }
+
 `;
+
+
 export const Thumbnail = styled.div`
-  flex: 1;
-  
+  flex: auto;
+
   @media (max-width: 960px) {
     width: 100%;
   }
@@ -48,21 +92,29 @@ export const Thumbnail = styled.div`
   img {
     display: flex;
     width: 100%;
-    float: right;
+
   }
 ` ;
 export const Stats = styled.div`
-  display: flex;
-  align-items: center;
+  display: block;
+  padding-bottom: 0.5rem;
 
   div {
-    display: flex;
-    &:first-child {
-      margin-right: 0.5rem;
+    margin-right: 0.5rem;
+    padding-bottom: 0.2rem;
+
+    b {
+      text-transform: capitalize;
     }
+
     span {
-      color: #000;
-      margin-left: 0.5rem;
+	    display: inline-block;
+      color: #707070;
+      margin-right: 0.5rem;
+	    margin-left: 0.5rem;
+      padding-bottom: 0.2rem;
+
     }
+
   }
 `;

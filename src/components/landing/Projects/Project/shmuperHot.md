@@ -7,7 +7,7 @@ description: "Space Shoot'Em Up mini game with heavy inspiration from Super Hot 
 
 video: 
 
-img: "/images/GIF/shmuperhot.gif"
+img: "./images/GIF/shmuperhot.gif"
 
 teamSize: "1"
 
@@ -16,5 +16,10 @@ projectTime: "2 weeks"
 role: "Everything"
 
 engine: "Unity / C# and XCode / swift"
+
+myWork: 
+
+lessons: 
+
 
 ---

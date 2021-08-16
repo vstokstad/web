@@ -25,7 +25,13 @@ export const Item = styled.div`
   height: 100%;
   overflow: hidden;
   box-shadow: 0 1px 6px 0 rgba(0, 0, 0, 0.11);
+  :hover {
+    box-shadow: 0 4px 24px 0 rgba(0, 0, 0, 0.11);
+    cursor: pointer;
+    transform: scale(1.002);
 
+   
+  }
   h4 {
     color: #212121;
   }

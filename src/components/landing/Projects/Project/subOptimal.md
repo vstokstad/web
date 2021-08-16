@@ -16,4 +16,8 @@ role: "Programmer - Interaction system and cameras. Overall gameplay."
 
 engine: "Unity / C#"
 
+myWork:
+
+lessons:
+
 ---

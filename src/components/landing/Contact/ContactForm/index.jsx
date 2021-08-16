@@ -4,18 +4,8 @@ import * as Yup from 'yup';
 import { Button, Input } from '../../../common';
 import { Center, Error, InputField } from './styles';
 import 'react-google-recaptcha-v3';
-import ReCaptcha from '@pittica/gatsby-plugin-recaptcha';
-
 
 const ContactForm = ({ isSubmitting, values, errors, touched }) => {
-  //
-  // window.grecaptcha.ready(function() {
-  //     window.grecaptcha.execute('YOUR_SITE_KEY', { action: 'homepage' })
-  //       .then(function(token) {
-  //         document.getElementById('captchaResponse').value = token;
-  //       });
-  //   });
-
 
   return <>
     <Form
@@ -63,10 +53,7 @@ const ContactForm = ({ isSubmitting, values, errors, touched }) => {
         />
         <ErrorMessage component={Error} name='message' />
       </InputField>
-      <InputField>
-        <Input type='hidden' id='captchaResponse' name='g-recaptcha-response' />
-      </InputField>
-        <ReCaptcha action={'https://getform.io/f/570b4aa7-9d04-490f-a87f-6c5d42c68720'} sitekey={"6LftVPUZAAAAAIwqTEu14G3I4gUVmE33M_HoFZLW"} id={"captchaResponse"}/>
+        <input type='hidden' id='captchaResponse' name='g-recaptcha-response' />
 
       {values.success && <InputField>
         <Center>
@@ -79,7 +66,7 @@ const ContactForm = ({ isSubmitting, values, errors, touched }) => {
       <Center>
         <Button
           secondary
-          class='g-recaptcha'
+          type="submit"
           data-sitekey='6LftVPUZAAAAAIwqTEu14G3I4gUVmE33M_HoFZLW'
           action="submit"
           disabled={isSubmitting}
@@ -128,9 +115,7 @@ export default withFormik({
         headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
         body: encode({
           'form-name': 'Contact',
-          name,
-          email,
-          message,
+          name, email, message
         }),
       }).then((r) => console.log('Success form send.'));
 
