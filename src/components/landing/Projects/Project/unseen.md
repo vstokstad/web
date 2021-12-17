@@ -5,7 +5,7 @@ title: "The Unseen"
 
 description: "The Unseen is a first person horror/survival game. You enter an underground water treatment facility as a mechanic. Equipped only with a standard issue multi-tool with an environment scan functionality you set of to fix the issues all over the plant. But something lurks in the shadows. as you explore through the facility you find traces of previous mechanics and personnel, whom never got to leave the facility. Can you make your way out before the 'Entity' gets you?"
 
-video:
+video: "https://www.youtube-nocookie.com/embed/pQqV4K2vJsM"
 
 img: "./images/PNG/unseen.png"
 
@@ -27,5 +27,6 @@ lot. As most of the puzzles and interactions where almost entierly handled by bl
 lot easier to be a bit more specific in code about which objects should be highlighted and when. Also the AI turned out
 more of a trial-and-error test which would have needed a lot more in-game control to be effective in the game."
 
+isActive: true
 
 ---
