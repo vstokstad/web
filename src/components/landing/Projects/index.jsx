@@ -8,28 +8,26 @@ import { Project } from './Project/Project';
 export const Projects = () => {
 
 	const data = useStaticQuery(graphql`
-      {
-          all: allMarkdownRemark {
-              nodes {
-                  frontmatter {
-                      description
-                      engine
-                      img
-                      role
-                      projectTime
-                      slug
-                      teamSize
-                      title
-                      video
-                      myWork
-                      lessons
-                      link
-		                  isActive
-                  }
-              }
+    {
+     all: allMarkdownRemark {
+        nodes {
+          frontmatter {
+            description
+            engine
+            img
+            role
+            projectTime
+            slug
+            teamSize
+            title
+            video
+            myWork
+            lessons
           }
+        }
       }
-	`);
+    }
+  `)
 
 	return (
 		<>
@@ -37,14 +35,11 @@ export const Projects = () => {
 				<h2>Projects</h2>
 				<Grid>
 					{data.all.nodes.map((node) => {
-						if (node.frontmatter.isActive === true) {
+						return (
 
-							return (
-								<Project project={node.frontmatter} />
-							);
-						} else {
-							return (<></>);
-						}
+							<Project project={node.frontmatter} />
+
+						);
 					})}
 				</Grid>
 

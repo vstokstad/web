@@ -21,6 +21,5 @@ myWork:
 
 lessons: 
 
-isActive: false
 
 ---
