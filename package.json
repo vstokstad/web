@@ -4,6 +4,9 @@
   "description": "web - vilhelmstokstad.com",
   "version": "0.0.3",
   "author": "vstokstad <v.stokstad@gmal.com>",
+  "engines": {
+    "node": ">=16"
+  },
   "dependencies": {
     "@mikaelkristiansson/domready": "^1.0.10",
     "@pittica/gatsby-plugin-recaptcha": "^1.0.1",
@@ -66,7 +69,7 @@
     "dev": "gatsby develop",
     "clean": "gatsby clean",
     "serve": "gatsby serve",
-    "deploy": "gatsby build && netlify deploy",
+    "deploy": "gatsby build",
     "test": "echo \"Write tests! -> https://gatsby.app/unit-testing\""
   },
   "devDependencies": {
