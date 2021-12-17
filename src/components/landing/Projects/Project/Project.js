@@ -7,14 +7,14 @@ export const Project = ({ project }) => {
 	const [more, setMore] = useState('more');
 	let thumbnail;
 	if (project.video !== null) {
-		thumbnail = <iframe title={project.title} width='100%' height='315'
+		thumbnail = <iframe title={project.title}
 		                    src={project.video}
 		                    frameBorder='0'
 		                    allow='accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture'
 		                    allowFullScreen />;
 
 	} else {
-		thumbnail = <img src={project.img} alt={project.title} />;
+		thumbnail = <img src={project.img} alt={project.title} width='100%' height='66%' />;
 	}
 
 	return (
@@ -26,6 +26,7 @@ export const Project = ({ project }) => {
 						<Thumbnail>
 							<div>
 								{thumbnail}
+								{project.link != null ? <><p><a href={project?.link}><b>{'Download Game'}</b></a></p> </> : <></>}
 							</div>
 						</Thumbnail>
 						<p>{project.description}</p>
@@ -36,8 +37,6 @@ export const Project = ({ project }) => {
 							<div><b>Role:</b> <span>{project.role}</span> <br /></div>
 							<div className={more}><b>My Work:</b> <span>{project.myWork}</span> <br /></div>
 							<div className={more}><b>Lessons Learned:</b> <span>{project.lessons}</span> <br /></div>
-
-
 						</Stats>
 						{more === 'more' ? <h2>...</h2> : <></>}
 					</Content>

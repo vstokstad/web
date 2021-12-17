@@ -20,4 +20,6 @@ myWork:
 
 lessons:
 
+isActive: true
+
 ---
