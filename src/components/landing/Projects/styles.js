@@ -21,26 +21,6 @@ export const Grid = styled.div`
 `;
 
 export const Item = styled.div`
-  width: 100%;
-  height: available;
-  overflow: hidden;
-  box-shadow: 0 1px 6px 0 rgba(0, 0, 0, 0.11);
-
-  :hover {
-    width: 100%;
-    box-shadow: 0 4px 24px 0 rgba(0, 0, 0, 0.11);
-    cursor: pointer;
-	  transform: scale(1.002);
-
-    h2 {
-      transform: scale(1.2);
-    }
-
-    h3 {
-      color: #1c1c1c;
-    }
-  }
-
   div {
     .more {
       display: none;
@@ -48,7 +28,7 @@ export const Item = styled.div`
 
     .less {
       display: inherit;
-      
+
     }
   }
 
@@ -65,6 +45,7 @@ export const Item = styled.div`
   p {
     color: #707070;
   }
+
 `;
 
 export const Content = styled.div`
@@ -74,9 +55,8 @@ export const Content = styled.div`
     display: block;
     margin-right: 0.5rem;
     padding-bottom: 0.2rem;
-	  text-align: justify;
-	  
-	  
+    text-align: justify;
+
   }
 
 `;
@@ -94,7 +74,13 @@ export const Thumbnail = styled.div`
     width: 100%;
 
   }
-` ;
+
+  iframe {
+    display: block;
+    width: 100%;
+    height: 315px;
+  }
+`;
 export const Stats = styled.div`
   display: block;
   padding-bottom: 0.5rem;
@@ -108,10 +94,10 @@ export const Stats = styled.div`
     }
 
     span {
-	    display: inline-block;
+      display: inline-block;
       color: #707070;
       margin-right: 0.5rem;
-	    margin-left: 0.5rem;
+      margin-left: 0.5rem;
       padding-bottom: 0.2rem;
 
     }
