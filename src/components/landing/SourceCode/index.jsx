@@ -14,16 +14,16 @@ export const SourceCode = () => {
     },
   } = useStaticQuery(
     graphql`
-      {
+    query {
     github {
       viewer {
-        repositories(first: 8, orderBy: {field: STARGAZERS, direction: DESC}, privacy: PUBLIC, isFork: false) {
+        repositories(first: 8, orderBy: {field: STARGAZERS, direction: DESC}, privacy: PUBLIC, isFork: false, ownerAffiliations: OWNER) {
           edges {
             node {
               id
               name
               url
-              description
+              shortDescriptionHTML
               stargazers {
                 totalCount
               }
@@ -52,7 +52,7 @@ export const SourceCode = () => {
             <Card>
               <Content>
                 <h4>{node.name}</h4>
-                <p>{node.description}</p>
+                <p>{node.shortDescriptionHTML}</p>
               </Content>
               <Stats>
                 <div>
