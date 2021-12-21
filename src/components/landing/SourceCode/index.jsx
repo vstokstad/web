@@ -52,7 +52,9 @@ export const SourceCode = () => {
             <Card>
               <Content>
                 <h4>{node.name}</h4>
-                <p>{node.shortDescriptionHTML}</p>
+                <div className='container'>
+                  <p className='text'>{node.shortDescriptionHTML}</p>
+                </div>
               </Content>
               <Stats>
                 <div>
@@ -69,5 +71,6 @@ export const SourceCode = () => {
         ))}
       </Grid>
     </Wrapper>
+
   );
 };

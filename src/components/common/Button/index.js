@@ -15,6 +15,9 @@ export const Button = styled.button`
   color: #fff;
   background: #0074d9;
 
+  &:hover{
+  background: #0063e8;
+  }
   &:focus {
     outline: none;
   }
@@ -23,7 +26,7 @@ export const Button = styled.button`
     background: gray;
   }
 
-  ${({ secondary }) =>
+  ${({ secondary }) => 
     secondary &&
     `
 		background: #001F3F;

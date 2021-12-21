@@ -3,7 +3,6 @@ import { ErrorMessage, FastField, Form, withFormik } from 'formik';
 import * as Yup from 'yup';
 import { Button, Input } from '../../../common';
 import { Center, Error, InputField } from './styles';
-import 'react-google-recaptcha-v3';
 
 const ContactForm = ({ isSubmitting, values, errors, touched }) => {
 
@@ -53,7 +52,6 @@ const ContactForm = ({ isSubmitting, values, errors, touched }) => {
         />
         <ErrorMessage component={Error} name='message' />
       </InputField>
-        <input type='hidden' id='captchaResponse' name='g-recaptcha-response' />
 
       {values.success && <InputField>
         <Center>
@@ -99,7 +97,7 @@ export default withFormik({
   },
 
   handleSubmit: async ({ name, email, message, e },
-                       { setSubmitting, resetForm, setFieldValue }) => {
+    { setSubmitting, resetForm, setFieldValue }) => {
 
     try {
       const encode = (data) =>

@@ -6,7 +6,7 @@ export const Wrapper = styled.div`
 
 export const Grid = styled.div`
   display: grid;
-  align-items: center;
+  align-items: start;
   grid-template-columns: repeat(3, 1fr);
   grid-template-rows: 8fr;
   gap: 1.2rem 1.2rem;
@@ -32,7 +32,33 @@ export const Item = styled.div`
 `;
 
 export const Content = styled.div`
+.container{
+  width:100%;
+  position: relative;
+  padding-bottom:30%;
+  height:0px;
+
+}
+.text{
+    overflow: hidden;
+    white-space: pre-wrap;
+    text-overflow: ellipsis;
+    display: block;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+   
+    
+}
   padding: 1rem 0;
+ p {
+    
+    margin-right: 0.5rem;
+    padding-bottom: 0.2rem;
+    
+  }
 `;
 
 export const Stats = styled.div`

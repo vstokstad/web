@@ -1,20 +1,25 @@
 import React, { useState } from 'react';
-import { Content, Item, Stats, Thumbnail } from '../styles';
+import { Content, Description, Item, Stats, Thumbnail } from '../styles';
 import { Card } from '../../../common';
 
-export const Project = ({ project }) => {
+export const Project = ({ project, key }) => {
 
 	const [more, setMore] = useState('more');
+
 	let thumbnail;
 	if (project.video !== null) {
-		thumbnail = <iframe title={project.title}
-		                    src={project.video}
-		                    frameBorder='0'
-		                    allow='accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture'
-		                    allowFullScreen />;
+		thumbnail = <div className='videoContainer'>
+			<iframe
+				className='video'
+				title={project.title}
+				src={project.video}
+				frameBorder='0'
+				allow='accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture'
+				allowFullScreen />
+		</div>;
 
 	} else {
-		thumbnail = <img src={project.img} alt={project.title} width='100%' height='66%' />;
+		thumbnail = <div className='videoContainer'><img src={project.img} alt={project.title} /></div>;
 	}
 
 	return (
@@ -24,12 +29,17 @@ export const Project = ({ project }) => {
 					<Content>
 						<h3>{project.title}</h3>
 						<Thumbnail>
-							<div>
-								{thumbnail}
-								{project.link != null ? <><p><a href={project?.link}><b>{'Download Game'}</b></a></p> </> : <></>}
-							</div>
+
+							{thumbnail}
+
+
 						</Thumbnail>
-						<p>{project.description}</p>
+
+						<Description>
+
+							<p>{project.description}</p>
+							{project.link != null ? <><a className='link' href={project?.link}>{'Download Game [windows]'}</a> </> : <></>}
+						</Description>
 						<Stats>
 							<div><b>Team size:</b> <span>{project.teamSize}</span> <br /></div>
 							<div><b>Project time:</b> <span>{project.projectTime}</span> <br /></div>

@@ -13,6 +13,7 @@ export const Projects = () => {
               nodes {
                   frontmatter {
                       description
+					  descriptionLong
                       engine
                       img
                       role
@@ -24,7 +25,7 @@ export const Projects = () => {
                       myWork
                       lessons
                       link
-		                  isActive
+		              isActive
                   }
               }
           }
@@ -36,11 +37,11 @@ export const Projects = () => {
 			<Wrapper as={Container} id='projects'>
 				<h2>Projects</h2>
 				<Grid>
-					{data.all.nodes.map((node) => {
+					{data.all.nodes.map((node, key) => {
 						if (node.frontmatter.isActive === true) {
 
 							return (
-								<Project project={node.frontmatter} />
+								<Project project={node.frontmatter} key={key} />
 							);
 						} else {
 							return (<></>);

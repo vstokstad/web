@@ -32,7 +32,6 @@ export const Item = styled.div`
     }
   }
 
-
   h3 {
     color: #212121;
   }
@@ -45,7 +44,14 @@ export const Item = styled.div`
   p {
     color: #707070;
   }
-
+  .link{
+   color: #707070;
+   text-decoration: none;
+   :hover{
+     color:#212121;
+text-decoration: underline;
+   }
+ }
 `;
 
 export const Content = styled.div`
@@ -55,30 +61,49 @@ export const Content = styled.div`
     display: block;
     margin-right: 0.5rem;
     padding-bottom: 0.2rem;
-    text-align: justify;
 
   }
 
 `;
+export const Description = styled.div`
+width: 100%;
+display: block;
+text-align: justify;
 
+margin-top: 00.5rem;
+margin-bottom: 00.5rem;
+@media (max-width: 960px) {
+   height: 110px;
+ }
+ @media (max-width: 680px) {
+  height: 120px;
+ }
+
+`;
 
 export const Thumbnail = styled.div`
-  flex: auto;
 
-  @media (max-width: 960px) {
-    width: 100%;
-  }
+  width: 100%;
+
+  position: relative;
+    padding-bottom: 56.25%;
+    height:0px;
 
   img {
-    display: flex;
+    position: absolute;
+    top: 0;
+    left: 0;
     width: 100%;
-
+    height: 100%;
   }
 
-  iframe {
-    display: block;
+ 
+  .video {
+    position: absolute;
+    top: 0;
+    left: 0;
     width: 100%;
-    height: 315px;
+    height: 100%;
   }
 `;
 export const Stats = styled.div`
@@ -88,7 +113,6 @@ export const Stats = styled.div`
   div {
     margin-right: 0.5rem;
     padding-bottom: 0.2rem;
-
     b {
       text-transform: capitalize;
     }

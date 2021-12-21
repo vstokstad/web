@@ -9,6 +9,8 @@ video: "https://www.youtube-nocookie.com/embed/J_kOex71fDo"
 
 img: ""
 
+link: 
+
 teamSize: "9"
 
 projectTime: "2 weeks."
