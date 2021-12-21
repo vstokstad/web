@@ -17,7 +17,7 @@ module.exports = {
         cssLoaderOptions: {
           esModule: true,
           modules: {
-            namedExport: true,
+            namedExport: false,
           },
         },
       },
