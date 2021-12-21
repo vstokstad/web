@@ -37,11 +37,10 @@ export const Projects = () => {
 			<Wrapper as={Container} id='projects'>
 				<h2>Projects</h2>
 				<Grid>
-					{data.all.nodes.map((node, key) => {
+					{data.all.nodes.map((node, index) => {
 						if (node.frontmatter.isActive === true) {
-
 							return (
-								<Project project={node.frontmatter} key={key} />
+								<Project project={node.frontmatter} key={index} />
 							);
 						} else {
 							return (<></>);
