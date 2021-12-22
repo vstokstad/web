@@ -17,8 +17,17 @@ module.exports = {
 			resolve: `gatsby-plugin-canonical-urls`,
 			options: {
 				siteUrl: config.url,
-			},
+			}
 		},
+    'gatsby-plugin-styled-components',
+    {
+      resolve: `gatsby-source-filesystem`,
+		options: {
+        name: `projects`,
+        path: `${__dirname}/src/components/landing/Projects/Project`,
+      },
+    },
+    'gatsby-transformer-remark',
 		{
 			resolve: "gatsby-source-graphql",
 			options: {
@@ -26,7 +35,7 @@ module.exports = {
 				fieldName: "github",
 				url: "https://api.github.com/graphql",
 				headers: {
-					Authorization: `bearer ${process.env.PORTFOLIO_GITHUB_TOKEN}`,
+					Authorization: `bearer ${process.env.TOKEN}`,
 				},
 				fetchOptions: {},
 			},

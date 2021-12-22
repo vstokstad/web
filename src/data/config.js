@@ -29,4 +29,5 @@ module.exports = {
     phone: '+46735019539',
   },
   foundingDate: '2020',
+  googleAnalyticsID: 'UA-37134072-1'
 };
