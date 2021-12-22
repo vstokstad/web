@@ -9,7 +9,7 @@ export const Contact = () => (
 
   <ContactWrapper as={Container}>
     <Thumbnail>
-      <img src={skills} alt="Contact Vilhelm" />
+      <img src={skills} alt="Contact Vilhelm"  />
     </Thumbnail>
     <Details>
       <h1>Contact</h1>
