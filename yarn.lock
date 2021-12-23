@@ -2832,6 +2832,15 @@ __metadata:
   languageName: node
   linkType: hard
 
+"@types/react-is@npm:^17":
+  version: 17.0.3
+  resolution: "@types/react-is@npm:17.0.3"
+  dependencies:
+    "@types/react": "*"
+  checksum: 6abb7c47d54f012272650df8a962a28bd82f219291e5ef8b4dfa7fe0bb98ae243b060bf9fbe8ceff6213141794855a006db194b490b00ffd15842ae19d0ce1f0
+  languageName: node
+  linkType: hard
+
 "@types/react@npm:*":
   version: 17.0.18
   resolution: "@types/react@npm:17.0.18"
@@ -12962,6 +12971,13 @@ fsevents@~2.3.2:
   languageName: node
   linkType: hard
 
+"react-is@npm:^17.0.2":
+  version: 17.0.2
+  resolution: "react-is@npm:17.0.2"
+  checksum: 9d6d111d8990dc98bc5402c1266a808b0459b5d54830bbea24c12d908b536df7883f268a7868cfaedde3dd9d4e0d574db456f84d2e6df9c4526f99bb4b5344d8
+  languageName: node
+  linkType: hard
+
 "react-lifecycles-compat@npm:^3.0.4":
   version: 3.0.4
   resolution: "react-lifecycles-compat@npm:3.0.4"
@@ -15676,6 +15692,7 @@ resolve@^2.0.0-next.3:
   version: 0.0.0-use.local
   resolution: "vilhelmstokstad.com@workspace:."
   dependencies:
+    "@types/react-is": ^17
     axios: ^0.21.1
     babel-eslint: ^10.1.0
     babel-plugin-styled-components: ^1.10.6
@@ -15700,6 +15717,7 @@ resolve@^2.0.0-next.3:
     react-dom: ^17.0.2
     react-google-recaptcha: ^2.1.0
     react-helmet: ^6.1.0
+    react-is: ^17.0.2
     styled-components: ^5.3.0
     yup: ^0.32.9
   languageName: unknown
