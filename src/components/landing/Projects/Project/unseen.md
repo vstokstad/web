@@ -7,7 +7,7 @@ description: "The Unseen is a first person horror/survival game. You enter an un
 
 video: "https://www.youtube-nocookie.com/embed/pQqV4K2vJsM"
 
-img: "./images/PNG/unseen.png"
+img: "./images/GIF/unseen_scan_2.gif"
 
 link: 
 
