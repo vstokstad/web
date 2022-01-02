@@ -52,7 +52,7 @@
     "typescript": "4.1.2",
     "url-loader": "^4.1.1",
     "webpack-plugin-serve": "1.2.1",
-    "yarn": "^1.22.10",
+    "yarn": "^1.22.17",
     "yup": "^0.31.1"
   },
   "keywords": [
@@ -62,7 +62,7 @@
   ],
   "license": "MIT",
   "scripts": {
-    "build": "gatsby build",
+    "build": "yarn install && gatsby build",
     "dev": "gatsby develop",
     "clean": "gatsby clean",
     "serve": "gatsby serve",

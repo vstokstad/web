@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import { Content, Description, Item, Stats, Thumbnail } from '../styles';
 import { Card } from '../../../common';
 
-export const Project = ({ project, key }) => {
+export const Project = ({ project}) => {
 
 	const [more, setMore] = useState('more');
 
