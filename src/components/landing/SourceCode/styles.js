@@ -32,32 +32,16 @@ export const Item = styled.div`
 `;
 
 export const Content = styled.div`
-.container{
-  width:100%;
-  position: relative;
-  padding-bottom:30%;
-  height:0px;
-
-}
-.text{
-    overflow: hidden;
-    white-space: pre-wrap;
-    text-overflow: ellipsis;
-    display: block;
-    position: absolute;
-    top: 0;
-    left: 0;
+  .container {
     width: 100%;
-    height: 100%;
-   
-    
-}
-  padding: 1rem 0;
- p {
-    
+    position: relative;
+
+  }
+  
+
+  p {
     margin-right: 0.5rem;
     padding-bottom: 0.2rem;
-    
   }
 `;
 

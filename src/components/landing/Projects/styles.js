@@ -36,8 +36,9 @@ export const Item = styled.div`
     color: #212121;
   }
 
-  h2 {
+  h5 {
     float: right;
+	  
     color: #212121;
   }
 
@@ -46,7 +47,7 @@ export const Item = styled.div`
   }
   .link{
    color: #707070;
-   text-decoration: none;
+   text-decoration: underline;
    :hover{
      color:#212121;
 text-decoration: underline;
@@ -73,10 +74,10 @@ text-align: justify;
 margin-top: 00.5rem;
 margin-bottom: 00.5rem;
 @media (max-width: 960px) {
-   height: 110px;
+
  }
  @media (max-width: 680px) {
-  height: 120px;
+
  }
 
 `;

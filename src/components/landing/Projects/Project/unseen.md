@@ -7,7 +7,7 @@ description: "The Unseen is a first person horror/survival game. You enter an un
 
 video: "https://www.youtube-nocookie.com/embed/pQqV4K2vJsM"
 
-img: "./images/GIF/unseen_scan_2.gif"
+img: "./images/GIF/unseen_scan_2_small.gif"
 
 link: 
 
@@ -17,7 +17,7 @@ projectTime: "6 weeks"
 
 engine: "Unreal Engine 4 / C++"
 
-role: "Lead Programmer, Systems, AI. Responsible for version control."
+role: "Lead Programmer, Systems, AI, ''Scan effect'' shader."
 
 myWork: "I constructed the AI system for the 'Entity' as well as the scanning system including the scan shader and
 scanned objects custom render depth. I also did a 'pixel sort shader' for a 'distortion-of-reality'-effect when the

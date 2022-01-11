@@ -3874,6 +3874,13 @@ __metadata:
   languageName: node
   linkType: hard
 
+"babel-jsx-utils@npm:^1.1.0":
+  version: 1.1.0
+  resolution: "babel-jsx-utils@npm:1.1.0"
+  checksum: 0adb20364fca5fb8b2bd77f959a3118011d1b27d6b73912ffa7634637ad6b297baa9400e4d37a00cc190ac33e56f806294bf483cd766dc8104f465c2eaee8116
+  languageName: node
+  linkType: hard
+
 "babel-loader@npm:^8.2.2":
   version: 8.2.3
   resolution: "babel-loader@npm:8.2.3"
@@ -3975,6 +3982,19 @@ __metadata:
     "@babel/core": ^7.0.0
     gatsby: ^3.0.0-next.0
   checksum: e2a7bed8afaeb6a202ff608b42138b6a649047e7f9ffd97ffb922682ed457c41361aaa7c6a4c030e7a87a5d2bf0d964d670726ad0a6413b8b07b4bbae3608a43
+  languageName: node
+  linkType: hard
+
+"babel-plugin-remove-graphql-queries@npm:^4.4.0":
+  version: 4.4.0
+  resolution: "babel-plugin-remove-graphql-queries@npm:4.4.0"
+  dependencies:
+    "@babel/runtime": ^7.15.4
+    gatsby-core-utils: ^3.4.0
+  peerDependencies:
+    "@babel/core": ^7.0.0
+    gatsby: ^4.0.0-next
+  checksum: 24559842c73a3d388f99f37730bd7f95300146e770591bad7e8ea5e1566b4cfecd7d7ce7cbf49ce180f42388d2350dd585a23a7e3ad43502f9b5591b1729f6e4
   languageName: node
   linkType: hard
 
@@ -4900,6 +4920,13 @@ __metadata:
   version: 1.8.0
   resolution: "common-tags@npm:1.8.0"
   checksum: fb0cc9420d149176f2bd2b1fc9e6df622cd34eccaca60b276aa3253a7c9241e8a8ed1ec0702b2679eba7e47aeef721869c686bbd7257b75b5c44993c8462cd7f
+  languageName: node
+  linkType: hard
+
+"common-tags@npm:^1.8.2":
+  version: 1.8.2
+  resolution: "common-tags@npm:1.8.2"
+  checksum: 767a6255a84bbc47df49a60ab583053bb29a7d9687066a18500a516188a062c4e4cd52de341f22de0b07062e699b1b8fe3cfa1cb55b241cb9301aeb4f45b4dff
   languageName: node
   linkType: hard
 
@@ -7305,6 +7332,24 @@ fsevents@~2.3.2:
   languageName: node
   linkType: hard
 
+"gatsby-core-utils@npm:^3.4.0":
+  version: 3.4.0
+  resolution: "gatsby-core-utils@npm:3.4.0"
+  dependencies:
+    "@babel/runtime": ^7.15.4
+    ci-info: 2.0.0
+    configstore: ^5.0.1
+    file-type: ^16.5.3
+    fs-extra: ^10.0.0
+    got: ^11.8.3
+    node-object-hash: ^2.3.10
+    proper-lockfile: ^4.1.2
+    tmp: ^0.2.1
+    xdg-basedir: ^4.0.0
+  checksum: f9c82452c8a17adb27279b0a9e882c081a13865413a1f95b9de2df85b15896f769302de9dd706dc362a72df02fe041e7e4355ef8d0eb78bec7e5350824d45d57
+  languageName: node
+  linkType: hard
+
 "gatsby-graphiql-explorer@npm:^1.14.0":
   version: 1.14.0
   resolution: "gatsby-graphiql-explorer@npm:1.14.0"
@@ -7378,6 +7423,34 @@ fsevents@~2.3.2:
     react: ^16.9.0 || ^17.0.0
     react-dom: ^16.9.0 || ^17.0.0
   checksum: 5ed3c1ff69f1711af1e601f924bd6a210a4a8c222cacf9ad3e42038cce5207f0f8d53ba5e75059dd951e636372a777749d968e26976684131734d39ae1d26762
+  languageName: node
+  linkType: hard
+
+"gatsby-plugin-image@npm:^2.4.0":
+  version: 2.4.0
+  resolution: "gatsby-plugin-image@npm:2.4.0"
+  dependencies:
+    "@babel/code-frame": ^7.14.0
+    "@babel/parser": ^7.15.5
+    "@babel/runtime": ^7.15.4
+    "@babel/traverse": ^7.15.4
+    babel-jsx-utils: ^1.1.0
+    babel-plugin-remove-graphql-queries: ^4.4.0
+    camelcase: ^5.3.1
+    chokidar: ^3.5.2
+    common-tags: ^1.8.2
+    fs-extra: ^10.0.0
+    gatsby-core-utils: ^3.4.0
+    objectFitPolyfill: ^2.3.5
+    prop-types: ^15.7.2
+  peerDependencies:
+    "@babel/core": ^7.12.3
+    gatsby: ^4.0.0-next
+    gatsby-plugin-sharp: ^4.0.0-next
+    gatsby-source-filesystem: ^4.0.0-next
+    react: ^16.9.0 || ^17.0.0
+    react-dom: ^16.9.0 || ^17.0.0
+  checksum: 2e05fdd43253325a79178b26fd8649b45741f185facf6927a267ecd091eb9309593b727b84bf7e4b06b5f2f2c4fa78a432fb524c306af042882b1433513cfd4c
   languageName: node
   linkType: hard
 
@@ -8158,7 +8231,7 @@ fsevents@~2.3.2:
   languageName: node
   linkType: hard
 
-"got@npm:^11.8.2":
+"got@npm:^11.8.2, got@npm:^11.8.3":
   version: 11.8.3
   resolution: "got@npm:11.8.3"
   dependencies:
@@ -11145,7 +11218,7 @@ fsevents@~2.3.2:
   languageName: node
   linkType: hard
 
-"node-object-hash@npm:^2.3.9":
+"node-object-hash@npm:^2.3.10, node-object-hash@npm:^2.3.9":
   version: 2.3.10
   resolution: "node-object-hash@npm:2.3.10"
   checksum: 5d2a80f67810294d352205bfc4823aa6097b06cd5dee6e0fec7e2bc40b55bfe5251e90313046230abe2fd230b8b7c5dcda967243e4136b94971e2630e6c7d0cd
@@ -11416,6 +11489,13 @@ fsevents@~2.3.2:
     define-properties: ^1.1.3
     es-abstract: ^1.19.1
   checksum: 0f17e99741ebfbd0fa55ce942f6184743d3070c61bd39221afc929c8422c4907618c8da694c6915bc04a83ab3224260c779ba37fc07bb668bdc5f33b66a902a4
+  languageName: node
+  linkType: hard
+
+"objectFitPolyfill@npm:^2.3.5":
+  version: 2.3.5
+  resolution: "objectFitPolyfill@npm:2.3.5"
+  checksum: b094a17ddf194186527ec805336f023ad3a32f532c3b7139f72c25cce0a5c7beb5d78ff95e8f9776e9adfe5a080782daed56d14e7182d6fbf4d59ce631681658
   languageName: node
   linkType: hard
 
@@ -15643,6 +15723,7 @@ resolve@^2.0.0-next.3:
     gatsby: ^3.6.1
     gatsby-plugin-canonical-urls: ^3.6.0
     gatsby-plugin-google-analytics: ^3.6.0
+    gatsby-plugin-image: ^2.4.0
     gatsby-plugin-manifest: ^3.6.0
     gatsby-plugin-nprogress: ^3.6.0
     gatsby-plugin-offline: ^4.6.0

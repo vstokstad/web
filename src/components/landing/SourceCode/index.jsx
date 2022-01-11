@@ -39,7 +39,7 @@ export const SourceCode = () => {
   );
   return (
     <Wrapper as={Container} id='sourceCode'>
-      <h2>SourceCode <a href={'https://www.github.com/vstokstad'}>github.com/vstokstad</a></h2>
+      <h2>sourceCode <a href={'https://www.github.com/vstokstad'}>github.com/vstokstad</a></h2>
       <Grid>
         {edges.map(({ node }) => (
           <Item
