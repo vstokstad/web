@@ -28,6 +28,8 @@ export const About = () => (
 							Sweden I was reporting from countries such as Syria, Myanmar, Indonesia, Iraq.
 							If you are interested, some of my photographic work can be <a className='link' href='https://visura.co/stokstad'>seen here.</a>
 						</div>
+						<br/>
+						<div><p>Here is my <a className="link" href='https://docs.google.com/document/d/e/2PACX-1vQT-OOXMW_mlcF88uGglZ2Lh73qUfDNe0cnM67uftgwYaSjXpPIWGmZJDMDx90aPM5zSpBJlwrnPauO/pub' >CV.</a>  </p></div>
 					</p>
 					<Grid>
 						<Item>
