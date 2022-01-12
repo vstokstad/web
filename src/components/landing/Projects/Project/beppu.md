@@ -7,7 +7,7 @@ description: "In BEPPUS, a 'Oddworld meets Lemmings' puzzle platformer, you lead
 
 descriptionLong: "In BEPPUS, a 'Oddworld meets Lemmings' puzzle platformer, you lead a group of Beppus with strange powers. Their world is harsh, and sacrificing some of them will be needed for the others’ salvation. How many can you save? BEPPUS is for players whom want to play a challenging and mind-bending puzzle platformer where levels can be approached in different ways."
 
-video: "https://www.youtube-nocookie.com/embed/awNNiZr93w4"
+video: "https://player.vimeo.com/video/665139096?h=e5226f3683&amp;badge=0&amp;autopause=0&amp;player_id=0&amp;app_id=58479"
 
 img: "https://img.itch.zone/aW1hZ2UvMTIxMjg2NC83MDc2NjYwLnBuZw==/original/hv8qr8.png"
 

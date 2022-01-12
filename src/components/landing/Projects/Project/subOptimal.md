@@ -4,7 +4,7 @@ slug: "/projects/suboptimal"
 title: "SubOptimal"
 description: "SubOptimal is a point and click adventure taking place on a stranded submarine. A mysterious asteroid have crashed close by and weird energies have transformed the crew into strange animal like beings."
 
-video: "https://www.youtube-nocookie.com/embed/ZyuJB7DRuPU"
+video: "https://player.vimeo.com/video/665139119?h=e0980b5e6e&amp;badge=0&amp;autopause=0&amp;player_id=0&amp;app_id=58479"
 
 img: ""
 
