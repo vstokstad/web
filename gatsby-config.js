@@ -1,6 +1,6 @@
-const config = require("./src/data/config");
+const config = require('./src/data/config');
 
-require("dotenv").config({
+require('dotenv').config({
 	path: `.env`,
 });
 
@@ -11,29 +11,43 @@ module.exports = {
 		author: config.author,
 	},
 	plugins: [
-		"gatsby-plugin-react-helmet",
-		"gatsby-plugin-styled-components",
+		'gatsby-plugin-react-helmet',
+		'gatsby-plugin-styled-components',
 		{
 			resolve: `gatsby-plugin-canonical-urls`,
 			options: {
 				siteUrl: config.url,
-			}
+			},
 		},
-    'gatsby-plugin-styled-components',
-    {
-      resolve: `gatsby-source-filesystem`,
-		options: {
-        name: `projects`,
-        path: `${__dirname}/src/components/landing/Projects/Project`,
-      },
-    },
-    'gatsby-transformer-remark',
+		'gatsby-plugin-styled-components',
 		{
-			resolve: "gatsby-source-graphql",
+			resolve: `gatsby-source-filesystem`,
 			options: {
-				typeName: "GitHub",
-				fieldName: "github",
-				url: "https://api.github.com/graphql",
+				name: `projects`,
+				path: `${__dirname}/src/components/landing/Projects/Project`,
+			},
+		}, {
+			resolve: `gatsby-transformer-remark`,
+			options: {
+				plugins: [
+					{
+						resolve: `gatsby-remark-highlight-code`,
+						options:{
+							lineNumbers: true,
+							theme: 'vscode',
+							terminal: 'carbon',
+							editable: false,
+						}
+					},
+				],
+			},
+		},
+		{
+			resolve: 'gatsby-source-graphql',
+			options: {
+				typeName: 'GitHub',
+				fieldName: 'github',
+				url: 'https://api.github.com/graphql',
 				headers: {
 					Authorization: `bearer ${process.env.TOKEN}`,
 				},
@@ -41,31 +55,31 @@ module.exports = {
 			},
 		},
 		{
-			resolve: "gatsby-plugin-nprogress",
+			resolve: 'gatsby-plugin-nprogress',
 			options: {
 				color: config.themeColor,
 				showSpinner: false,
 			},
 		},
 		{
-			resolve: "gatsby-plugin-google-analytics",
+			resolve: 'gatsby-plugin-google-analytics',
 			options: {
 				trackingId: config.googleAnalyticsID,
 				head: true,
 			},
 		},
 		{
-			resolve: "gatsby-plugin-manifest",
+			resolve: 'gatsby-plugin-manifest',
 			options: {
 				name: config.defaultTitle,
-				short_name: "starter",
-				start_url: "/",
+				short_name: 'starter',
+				start_url: '/',
 				background_color: config.backgroundColor,
 				theme_color: config.themeColor,
-				display: "minimal-ui",
-				icon: "./static/favicon/favicon-512.png",
+				display: 'minimal-ui',
+				icon: './static/favicon/favicon-512.png',
 			},
 		},
-		"gatsby-plugin-offline",
+		'gatsby-plugin-offline',
 	],
 };

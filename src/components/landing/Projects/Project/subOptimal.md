@@ -22,7 +22,8 @@ myWork: "In SubOptimal I was in charge of the whole structure for 'Interactable 
 
 lessons: "While automation is nice, it's sometimes just faster to do it manually from the get go (regarding the camera system). Instead of a heavy inheritance based structure for interactables in the world, it would probably have been both easier and more performant with an interface or component based set-up."
 
-
 isActive: true
+
+hasCode: false
 
 ---

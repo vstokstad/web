@@ -30,4 +30,6 @@ lot easier to be a bit more specific in code about which objects should be highl
 
 isActive: true
 
+hasCode: false
+
 ---

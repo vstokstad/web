@@ -9,7 +9,7 @@ descriptionLong: "In BEPPUS, a 'Oddworld meets Lemmings' puzzle platformer, you 
 
 video: "https://player.vimeo.com/video/665139096?h=e5226f3683&amp;badge=0&amp;autopause=0&amp;player_id=0&amp;app_id=58479"
 
-img: "https://img.itch.zone/aW1hZ2UvMTIxMjg2NC83MDc2NjYwLnBuZw==/original/hv8qr8.png"
+img: "https://videoapi-muybridge.vimeocdn.com/animated-thumbnails/image/65a362dd-71eb-43a4-ba88-22e49fc15fc4.gif?ClientID=vimeo-core-prod&Date=1641989162&Signature=5475a7b975ce9ca61275be144251434e903d826e"
 
 link: "https://futuregames.itch.io/fg20-ft-gp4-beppus"
 
@@ -27,4 +27,28 @@ lessons: "Do level streaming from the start, don't rework the level structure tw
 
 isActive: true
 
+hasCode: true
+
 ---
+
+```cpp{}
+bool AGP_Minion::ReceivedCommand( TSubclassOf<UGP_MinionCommand_Base> Command ){
+	if (Command->IsChildOf(UGP_MinionCommand_UnPossess::StaticClass()) == true) {
+		CurrentCommand = NewObject<UGP_MinionCommand_Base>(this, Command);
+		CurrentCommand->ExecuteCommand(this);
+		return true;
+	}
+	
+	if ( CurrentCommand != nullptr){
+		if ( !CurrentCommand->bIsOverridableCommand ){
+			// LOG("Command not overridable, returning");
+			return false;
+		}
+		// LOG("ReceivedCommand::CancelCommand");
+		CancelCommand();
+	}
+	CurrentCommand = NewObject<UGP_MinionCommand_Base>(this, Command);
+	CurrentCommand->ExecuteCommand(this);
+	return true;
+}
+```

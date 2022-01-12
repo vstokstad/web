@@ -1,4 +1,6 @@
 import styled from 'styled-components';
+import { defineCustomElements as deckDeckGoHighlightElement } from "@deckdeckgo/highlight-code/dist/loader";
+
 
 export const Wrapper = styled.div`
   padding: 2rem 0;
@@ -19,40 +21,85 @@ export const Grid = styled.div`
     grid-template-columns: 1fr;
   }
 `;
+export const ShowMoreBtn = styled.div`
+  h5 {
+    float: right;
+    color: darkgrey;
+    text-decoration: underline;
 
-export const Item = styled.div`
-  div {
-    .more {
-      display: none;
+    :hover {
+      text-decoration: underline;
+      color: dimgray;
+      cursor: pointer;
     }
 
-    .less {
-      display: inherit;
-
+    :active {
+      color: darkred;
     }
+
   }
+`;
+export const MoreSection = styled.div`
+  flex: content-box;
+
+  &.more {
+    visibility: visible;
+    opacity: 1;
+    max-height: 1000px;
+    transition: visibility 0.5s linear, opacity 0.3s linear, max-height 0.3s linear;
+  }
+
+  &.less {
+    opacity: 0;
+    visibility: hidden;
+    max-height: 0;
+    transition: visibility 0.5s linear, opacity 0.3s linear, max-height 0.3s linear;
+  }
+`;
+export const MoreItem = styled.div`
+
+
+  // padding-bottom: 0.5rem;
+
+  margin-right: 0.5rem;
+  padding-bottom: 0.2rem;
+
+  b {
+    text-transform: capitalize;
+  }
+
+  span {
+    display: inline-block;
+    color: #707070;
+    margin-right: 0.5rem;
+    margin-left: 0.5rem;
+    padding-bottom: 0.2rem;
+
+  }
+	
+	
+`;
+export const Item = styled.div`
+
 
   h3 {
     color: #212121;
   }
 
-  h5 {
-    float: right;
-	  
-    color: #212121;
-  }
 
   p {
     color: #707070;
   }
-  .link{
-   color: #707070;
-   text-decoration: underline;
-   :hover{
-     color:#212121;
-text-decoration: underline;
-   }
- }
+
+  .link {
+    color: darkgrey;
+    text-decoration: underline;
+
+    :hover {
+      color: dimgray;
+      text-decoration: underline;
+    }
+  }
 `;
 
 export const Content = styled.div`
@@ -67,18 +114,18 @@ export const Content = styled.div`
 
 `;
 export const Description = styled.div`
-width: 100%;
-display: block;
-text-align: justify;
+  width: 100%;
+  display: block;
+  text-align: justify;
 
-margin-top: 00.5rem;
-margin-bottom: 00.5rem;
-@media (max-width: 960px) {
+  margin-top: 00.5rem;
+  margin-bottom: 00.5rem;
+  @media (max-width: 960px) {
 
- }
- @media (max-width: 680px) {
+  }
+  @media (max-width: 680px) {
 
- }
+  }
 
 `;
 
@@ -87,8 +134,8 @@ export const Thumbnail = styled.div`
   width: 100%;
 
   position: relative;
-    padding-bottom: 56.25%;
-    height:0px;
+  padding-bottom: 56.25%;
+  height: 0px;
 
   img {
     position: absolute;
@@ -98,7 +145,7 @@ export const Thumbnail = styled.div`
     height: 100%;
   }
 
- 
+
   .video {
     position: absolute;
     top: 0;
@@ -114,6 +161,7 @@ export const Stats = styled.div`
   div {
     margin-right: 0.5rem;
     padding-bottom: 0.2rem;
+
     b {
       text-transform: capitalize;
     }

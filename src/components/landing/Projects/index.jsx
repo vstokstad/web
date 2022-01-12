@@ -13,7 +13,7 @@ export const Projects = () => {
               nodes {
                   frontmatter {
                       description
-					  descriptionLong
+                      descriptionLong
                       engine
                       img
                       role
@@ -25,8 +25,10 @@ export const Projects = () => {
                       myWork
                       lessons
                       link
-		              isActive
+                      isActive
+		                  hasCode
                   }
+                  html
               }
           }
       }
@@ -40,7 +42,7 @@ export const Projects = () => {
 					{data.all.nodes.map((node, index) => {
 						if (node.frontmatter.isActive === true) {
 							return (
-								<Project project={node.frontmatter} key={index} />
+								<Project project={node.frontmatter} code={node.html} key={index} />
 							);
 						} else {
 							return (<></>);
