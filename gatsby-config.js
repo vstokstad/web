@@ -34,7 +34,7 @@ module.exports = {
 						resolve: `gatsby-remark-highlight-code`,
 						options:{
 							lineNumbers: true,
-							theme: 'vscode',
+							theme: 'dracula',
 							terminal: 'carbon',
 							editable: false,
 						}

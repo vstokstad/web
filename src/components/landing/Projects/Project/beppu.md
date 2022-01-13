@@ -3,7 +3,7 @@ slug: "/projects/beppu"
 
 title: "BEPPUS"
 
-description: "In BEPPUS, a 'Oddworld meets Lemmings' puzzle platformer, you lead a group of Beppus with strange powers. Their world is harsh, and sacrificing some of them will be needed for the others’ salvation. How many can you save?"
+description: "In BEPPUS, a 'Oddworld meets Lemmings' puzzle platformer, you lead a group of Beppus with strange powers. Their world is harsh, and sacrificing some of them will be needed for the others’ salvation."
 
 descriptionLong: "In BEPPUS, a 'Oddworld meets Lemmings' puzzle platformer, you lead a group of Beppus with strange powers. Their world is harsh, and sacrificing some of them will be needed for the others’ salvation. How many can you save? BEPPUS is for players whom want to play a challenging and mind-bending puzzle platformer where levels can be approached in different ways."
 
@@ -19,7 +19,7 @@ projectTime: "4 weeks"
 
 engine: "Unreal Engine 4 / C++"
 
-role: "Gameplay & Systems programmer. Responsible for version control."
+role: "Gameplay, Systems, AI."
 
 myWork: "I did a lot of the general gameplay, including AI and interactions/commands as well as designed the systems behind the different commands for the controllable characters. I did the system with designers in mind, resulting in editable blueprints handling the visual ques connected to them."
 
@@ -32,23 +32,13 @@ hasCode: true
 ---
 
 ```cpp{}
-bool AGP_Minion::ReceivedCommand( TSubclassOf<UGP_MinionCommand_Base> Command ){
-	if (Command->IsChildOf(UGP_MinionCommand_UnPossess::StaticClass()) == true) {
-		CurrentCommand = NewObject<UGP_MinionCommand_Base>(this, Command);
-		CurrentCommand->ExecuteCommand(this);
-		return true;
-	}
-	
-	if ( CurrentCommand != nullptr){
-		if ( !CurrentCommand->bIsOverridableCommand ){
-			// LOG("Command not overridable, returning");
-			return false;
-		}
-		// LOG("ReceivedCommand::CancelCommand");
-		CancelCommand();
-	}
-	CurrentCommand = NewObject<UGP_MinionCommand_Base>(this, Command);
-	CurrentCommand->ExecuteCommand(this);
-	return true;
-}
+enum class EGP_MinionCommand : uint8{
+	None = 0,
+	Idle = 1,
+	UnPossess = 2,
+	Possess = 3,
+	Explode = 4,
+	MoveTo = 5
+};
+
 ```

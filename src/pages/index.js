@@ -1,10 +1,10 @@
 import React from 'react';
-import { Layout, SEO } from '../components/common';
+import { Layout, SEO as Seo } from '../components/common';
 import { About, Contact, Intro, Projects, SourceCode } from '../components/landing';
 
-export default () => (
+const Index= () => (
   <Layout>
-    <SEO />
+    <Seo/>
     <Intro />
     <Projects />
     <SourceCode />
@@ -12,3 +12,4 @@ export default () => (
     <Contact />
   </Layout>
 );
+export default Index;

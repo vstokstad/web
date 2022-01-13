@@ -2,7 +2,6 @@ import React, { useState } from 'react';
 import { Content, Description, Item, MoreItem, MoreSection, ShowMoreBtn, Stats, Thumbnail } from '../styles';
 import { Card } from '../../../common';
 import { defineCustomElements as deckDeckGoHighlightElement } from '@deckdeckgo/highlight-code/dist/loader';
-
 deckDeckGoHighlightElement();
 
 
@@ -13,18 +12,17 @@ export const Project = ({ code, project, key }) => {
 
 	let thumbnail;
 	if (project.video !== null) {
-		thumbnail = <div className='videoContainer'>
+		thumbnail =
 			<iframe
 				className='video'
 				title={project.title}
 				src={project.video}
 				frameBorder='0'
 				allow='autoplay; picture-in-picture' />
-		</div>;
+		;
 	} else {
-		thumbnail = <div className='video'>
-			<img src={project.img} alt={project.title} />
-		</div>;
+		thumbnail =
+			<img src={project.img} alt={project.title} />;
 	}
 
 	return (
@@ -33,24 +31,19 @@ export const Project = ({ code, project, key }) => {
 				<Card>
 					<Content>
 						<h3>{project.title}</h3>
-						<Thumbnail>
-							{thumbnail}
-						</Thumbnail>
-
+						<Thumbnail children={thumbnail} />
 						<Description>
 							<p>{project.description}</p>
-							{project.link != null ? <><a className='link'
-							                             href={project?.link}>{'Download Game [windows]'}</a> </> : <></>}
 						</Description>
-						<Stats>
-							<div><b>Team size:</b> <span>{project.teamSize}</span> <br /></div>
-							<div><b>Project time:</b> <span>{project.projectTime}</span> <br /></div>
-							<div><b>Engine:</b> <span>{project.engine}</span> <br /></div>
-							<div><b>Role:</b> <span>{project.role}</span> <br /></div>
-						</Stats>
-
 						<MoreSection className={more}>
-
+						<Stats>
+							<div><b>Team size:</b> <span>{project.teamSize}</span> </div>
+							<div><b>Project time:</b> <span>{project.projectTime}</span> </div>
+							<div><b>Engine:</b> <span>{project.engine}</span></div>
+							<div><b>Role:</b> <span>{project.role}</span></div>
+							{project.link != null ? <div><a className='link'
+							                             href={project?.link}>{'Download Game [windows]'}</a> </div> : <><br/></>}
+						</Stats>
 							<MoreItem>
 								<b>My Work:</b>
 								<span>{project.myWork}</span>
@@ -62,13 +55,11 @@ export const Project = ({ code, project, key }) => {
 							</MoreItem>
 							{project.hasCode === true ?
 								<MoreItem>
-									<b>Code:</b>
-										<div dangerouslySetInnerHTML={{ __html: code }} />
+									<div dangerouslySetInnerHTML={{ __html: code}}/>
 									<br />
-								</MoreItem> : <></>
-
+								</MoreItem> :
+								<></>
 							}
-
 						</MoreSection>
 
 

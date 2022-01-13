@@ -14,7 +14,7 @@ teamSize: "9"
 
 projectTime: "4 weeks"
 
-role: "Gameplay & Systems programmer. Responsible for version control."
+role: "Gameplay & Systems."
 
 engine: "Unity / C#"
 

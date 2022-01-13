@@ -3,7 +3,7 @@ slug: "/projects/unseen"
 
 title: "The Unseen"
 
-description: "The Unseen is a first person horror/survival game. You enter an underground water treatment facility as a mechanic. Equipped only with a standard issue multi-tool with an environment scan functionality you set of to fix the issues all over the plant. But something lurks in the shadows."
+description: "The Unseen is a first person horror/survival game. You enter an underground water treatment facility as a mechanic. Equipped with only the standard issue multi-tool you set out to fix the issues all over the plant. But something lurks in the shadows."
 
 video: "https://player.vimeo.com/video/665139150?h=29507d2aad&amp;badge=0&amp;autopause=0&amp;player_id=0&amp;app_id=58479"
 
@@ -17,7 +17,7 @@ projectTime: "6 weeks"
 
 engine: "Unreal Engine 4 / C++"
 
-role: "Lead Programmer, Systems, AI, ''Scan effect'' shader."
+role: "Lead Programmer, Systems, AI, scan shader."
 
 myWork: "I constructed the AI system for the 'Entity' as well as the scanning system including the scan shader and
 scanned objects custom render depth. I also did a 'pixel sort shader' for a 'distortion-of-reality'-effect when the

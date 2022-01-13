@@ -1,18 +1,24 @@
 [
   {
     "id": 0,
+    "name": "Email",
+    "link": "mailto:vilhelm.stokstad@futuregames.nu",
+    "icon": "/icons/telegram.svg"
+  },
+  {
+    "id": 1,
     "name": "Github",
     "link": "https://github.com/vstokstad",
     "icon": "/icons/github.svg"
   },
   {
-    "id": 1,
+    "id": 2,
     "name": "Twitter",
     "link": "https://twitter.com/vstokstad",
     "icon": "/icons/twitter.svg"
   },
   {
-    "id": 2,
+    "id": 3,
     "name": "LinkedIn",
     "link": "https://www.linkedin.com/in/vilhelmstokstad/",
     "icon": "/icons/linkedin.svg"
