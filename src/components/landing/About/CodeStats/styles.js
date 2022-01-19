@@ -48,6 +48,9 @@ export const ProgressBar = styled.div`
 	margin-bottom: 0.5rem;
 	
 }
+  .footer{
+    float: right;
+  }
   progress {
     display: block;
     transition: color 1s 0.5s ease-in-out, width 1s 1s ease-out;

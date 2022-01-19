@@ -67,8 +67,7 @@ export const CodeStats = () => {
 					</a>
 					<small>{javaScriptXP} XP</small>
 				</div>
-				<div className='progress'>
-
+				<div className='footer'>
 					<small>by: <a href={'https://codestats.net'}>code::stats</a> </small>
 				</div>
 			</ProgressBar>
