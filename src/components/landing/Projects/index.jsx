@@ -7,7 +7,7 @@ import { Project } from './Project/Project';
 
 export const Projects = () => {
 
-	const data = useStaticQuery(graphql`
+  const data = useStaticQuery(graphql`
       {
           all: allMarkdownRemark {
               nodes {
@@ -26,33 +26,33 @@ export const Projects = () => {
                       lessons
                       link
                       isActive
-		                  hasCode
+                      hasCode
                   }
                   html
               }
           }
       }
-	`);
+  `);
 
-	return (
-		<>
-			<Wrapper as={Container} id='projects'>
-				<h2>Projects</h2>
-				<Grid>
-					{data.all.nodes.map((node, index) => {
-						if (node.frontmatter.isActive === true) {
-							return (
-								<Project project={node.frontmatter} code={node.html} key={index} />
-							);
-						} else {
-							return (<></>);
-						}
-					})}
-				</Grid>
+  return (
+    <>
+      <Wrapper as={Container} id='projects'>
+        <h2>Projects</h2>
+        <Grid>
+          {data.all.nodes.map((node, index) => {
+            if (node.frontmatter.isActive === true) {
+              return (
+                <Project project={node.frontmatter} code={node.html} key={index} />
+              );
+            } else {
+              return (<></>);
+            }
+          })}
+        </Grid>
 
-			</Wrapper>
-		</>
-	);
+      </Wrapper>
+    </>
+  );
 };
 
 export default Projects;

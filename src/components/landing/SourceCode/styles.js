@@ -23,11 +23,11 @@ export const Grid = styled.div`
 export const Item = styled.div`
 
   h4 {
-    color: #212121;
+  
   }
 
   p {
-    color: #707070;
+ 
   }
 `;
 
@@ -60,7 +60,6 @@ export const Stats = styled.div`
     }
 
     span {
-      color: #000;
       margin-left: 0.5rem;
     }
   }

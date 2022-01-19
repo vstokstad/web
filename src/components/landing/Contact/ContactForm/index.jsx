@@ -112,7 +112,6 @@ export default withFormik({
         action: 'https://getform.io/f/570b4aa7-9d04-490f-a87f-6c5d42c68720',
         headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
         body: encode({
-          'form-name': 'Contact',
           name, email, message
         }),
       }).then((r) => console.log('Success form send.'));

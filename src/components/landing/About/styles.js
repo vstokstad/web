@@ -11,16 +11,13 @@ Wrapper = styled.div`
 export const Grid = styled.div`
   display: grid;
   align-items: start;
-  grid-template-columns: repeat(2,1fr);
+  justify-items: center;
+  grid-template-columns: repeat(2, 1fr);
   grid-template-rows: 1fr;
   gap: 1.2rem 1.2rem;
 
-  @media (max-width: 960px) {
-    //  grid-template-columns: repeat(1, 1fr);
-  }
-
   @media (max-width: 680px) {
-    //   grid-template-columns: repeat(2, 1fr);
+    grid-template-columns: repeat(1, 1fr);
   }
 `;
 export const SkillsWrapper = styled.div`
@@ -45,46 +42,51 @@ export const Details = styled.div`
   h1 {
     margin-bottom: 2rem;
     font-size: 26pt;
-    color: #212121;
+
   }
 
-  p.maintext {
+  p {
+    margin-bottom: 2.5rem;
+    font-size: 20pt;
+    font-weight: normal;
+    line-height: 1.3;
+  }
+
+  .maintext {
     font-size: 20pt;
     margin-bottom: 1.2rem;
     font-weight: normal;
     line-height: 1.3;
-    color: dimgray;
   }
-div.cv{
-	font-weight: bold;
-}
-	span.keyword{
-		font-weight: bold;
-	}
-  p.more {
+
+
+  div.more {
     font-size: 12pt;
     font-weight: normal;
     line-height: 1.1;
-    color: dimgray;
+
+  }
+
+  span {
+    font-weight: bolder;
   }
 
   a.link {
     font-size: 12pt;
     font-weight: inherit;
     line-height: 1.1;
-    color: dimgray;
+
     text-decoration: underline;
 
     :hover {
       text-decoration: underline;
-      color: #212121;
     }
   }
 
 `;
 
 export const Recipe = styled.div`
-	font-family: monospace;
+  font-family: monospace;
   display: inline-grid;
   @media (max-width: 960px) {
     padding-right: unset;
@@ -95,7 +97,7 @@ export const Recipe = styled.div`
     font-size: 14pt;
     font-weight: normal;
     line-height: 1.5;
-    color: dimgray;
+
   }
 
   div.h {
@@ -103,21 +105,21 @@ export const Recipe = styled.div`
     line-height: 1;
     font-size: 14pt;
     font-weight: bold;
-    color: dimgray;
+
 
   }
-	
+
   span.small {
     margin-bottom: 2.5rem;
     font-size: 10pt;
     font-weight: normal;
-    color: dimgray;
+
   }
 
   li {
     font-size: 12pt;
     font-weight: normal;
-    color: dimgray;
+
   }
 
   ul {
@@ -130,10 +132,11 @@ export const Item = styled.div`
   display: flex;
 
   h4 {
-    color: #212121;
+    color: ${({ theme }) => (theme === 'light' ? '#212121' : '#fff')};
   }
 
   p {
-    color: #707070;
+    color: ${({ theme }) => (theme === 'light' ? '#707070' : '#c7c7c7')};
   }
+
 `;

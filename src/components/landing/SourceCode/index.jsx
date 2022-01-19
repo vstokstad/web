@@ -1,11 +1,13 @@
-import React, { useEffect, useState } from 'react';
+import React, { useContext} from 'react';
 import { useStaticQuery, graphql } from 'gatsby';
 import { Container, Card } from '../../common';
-import starIcon from '../../../assets/icons/star.svg';
-import forkIcon from '../../../assets/icons/fork.svg';
 import { Wrapper, Grid, Item, Content, Stats } from './styles';
+import Star from 'components/common/Icons/Star';
+import Fork from 'components/common/Icons/Fork';
+import { ThemeContext } from '../../../providers/ThemeProvider';
 
 export const SourceCode = () => {
+  const { theme } = useContext(ThemeContext);
   const {
     github: {
       viewer: {
@@ -14,35 +16,30 @@ export const SourceCode = () => {
     },
   } = useStaticQuery(
     graphql`
-    query {
-    github {
-      viewer {
-        repositories(first: 8, orderBy: {field: STARGAZERS, direction: DESC}, privacy: PUBLIC, isFork: false, ownerAffiliations: OWNER) {
-          edges {
-            node {
-              id
-              name
-              url
-              shortDescriptionHTML
-              stargazers {
-                totalCount
-              }
-              forkCount
-              
+        query {
+            github {
+                viewer {
+                    repositories(first: 8, orderBy: {field: STARGAZERS, direction: DESC}, privacy: PUBLIC, isFork: false, ownerAffiliations: OWNER) {
+                        edges {
+                            node {
+                                id
+                                name
+                                url
+                                shortDescriptionHTML
+                                stargazers {
+                                    totalCount
+                                }
+                                forkCount
+
+                            }
+                        }
+                    }
+                }
             }
-          }
         }
-      }
-    }
-  }
     `,
   );
-  const [stars,setStars]=useState(0);
-  useEffect(() => {
-    fetch('https://api.github.com/repos/vstokstad/vulkan_eng').then(response => response.json()).then(resultData => {
-      setStars(resultData.stargazers_count);
-    });
-  });
+
   return (
     <Wrapper as={Container} id='sourceCode'>
       <h2>sourceCode <a href={'https://www.github.com/vstokstad'}>github.com/vstokstad</a></h2>
@@ -52,21 +49,22 @@ export const SourceCode = () => {
             key={node.id}
             as='a'
             href={node.url}
+            theme={theme}
           >
-            <Card>
+            <Card theme={theme}>
               <Content>
                 <h4>{node.name}</h4>
                 <div className='container'>
                   <p className='text'>{node.shortDescriptionHTML}</p>
                 </div>
               </Content>
-              <Stats>
+              <Stats theme={theme}>
                 <div>
-                  <img src={starIcon} alt='stars' />
+                  <Star color={theme === 'light' ? '#000' : '#fff'} />
                   <span>{node.stargazers.totalCount}</span>
                 </div>
                 <div>
-                  <img src={forkIcon} alt='forks' />
+                  <Fork color={theme === 'light' ? '#000' : '#fff'} />
                   <span>{node.forkCount}</span>
                 </div>
               </Stats>

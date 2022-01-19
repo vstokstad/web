@@ -23,18 +23,13 @@ export const Grid = styled.div`
 export const ShowMoreBtn = styled.div`
   h5 {
     float: right;
-    color: darkgrey;
     text-decoration: underline;
 
     :hover {
       text-decoration: underline;
-      color: dimgray;
       cursor: pointer;
     }
-
-    :active {
-      color: darkred;
-    }
+    
 
   }
 `;
@@ -68,7 +63,6 @@ export const MoreItem = styled.div`
 
   span {
     display: inline-block;
-    color: #707070;
     padding-bottom: 0.2rem;
   }
 
@@ -86,23 +80,16 @@ export const MoreItem = styled.div`
   }
 `;
 export const Item = styled.div`
-
-
-  h3 {
-    color: gray();
-  }
-
-
+h4{
+  color: ${({ theme }) => (theme === 'light' ? '#212121' : '#fff')};
+}
   p {
-    color: dimgray;
+    color: ${({ theme }) => (theme === 'light' ? '#707070' : '#c7c7c7')};
   }
-
   .link {
-    color: darkgrey;
     text-decoration: underline;
 
     :hover {
-      color: dimgray;
       text-decoration: underline;
     }
   }
@@ -149,7 +136,9 @@ export const Thumbnail = styled.div`
 export const Stats = styled.div`
   display: block;
   padding-bottom: 0.5rem;
-
+  svg path {
+    fill: ${({ theme }) => (theme === 'light' ? '#000' : '#fff')};
+  }
   div {
 
 
@@ -159,7 +148,7 @@ export const Stats = styled.div`
 
     span {
       display: inline-block;
-      color: #707070;
+      color: ${({ theme }) => (theme === 'light' ? '#000' : '#fff')};
     }
 
   }

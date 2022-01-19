@@ -1,8 +1,10 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect, useContext } from 'react';
 import { ProgressBar } from './styles';
+import { ThemeContext } from '../../../../providers/ThemeProvider';
 
 
 export const CodeStats = () => {
+	let {theme} = useContext(ThemeContext)
 	const levelFactor = 0.025;
 	const get_level = (current_xp) => {
 		return (Math.floor(levelFactor * Math.sqrt(current_xp)));
@@ -33,10 +35,7 @@ export const CodeStats = () => {
 	});
 
 	return (
-
-
-		<>
-			<ProgressBar>
+			<ProgressBar theme={theme}>
 				<h3>Progression</h3>
 				<small>Level {get_level(totalXP)}	| {totalXP} XP
 					since 2021
@@ -71,7 +70,5 @@ export const CodeStats = () => {
 					<small>by: <a href={'https://codestats.net'}>code::stats</a> </small>
 				</div>
 			</ProgressBar>
-		</>
-
 	);
 };

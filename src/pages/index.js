@@ -6,9 +6,9 @@ const Index= () => (
   <Layout>
     <Seo/>
     <Intro />
+    <About />
     <Projects />
     <SourceCode />
-    <About />
     <Contact />
   </Layout>
 );
