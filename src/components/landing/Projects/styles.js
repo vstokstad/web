@@ -59,7 +59,7 @@ export const MoreSection = styled.div`
 `;
 export const MoreItem = styled.div`
 
-  margin-right: 0.5rem;
+
   padding-bottom: 0.2rem;
 
   b {
@@ -69,8 +69,6 @@ export const MoreItem = styled.div`
   span {
     display: inline-block;
     color: #707070;
-    margin-right: 0.5rem;
-    margin-left: 0.5rem;
     padding-bottom: 0.2rem;
   }
 
@@ -84,7 +82,7 @@ export const MoreItem = styled.div`
     --deckgo-highlight-code-carbon-overflow: inherit;
     --deckgo-highlight-code-carbon-box-shadow: rgba(0, 0, 0, 0.2) 0 8px 16px;
     --deckgo-highlight-code-container-height: 100%;
-    --deckgo-highlight-code-carbon-margin: 0.5rem 0.5rem;
+   
   }
 `;
 export const Item = styled.div`
@@ -114,7 +112,6 @@ export const Content = styled.div`
 
   p {
     display: block;
-    margin-right: 0.5rem;
     padding-bottom: 0.2rem;
 
   }
@@ -125,7 +122,7 @@ export const Description = styled.div`
   display:block;
   text-align: justify;
   margin-top: 00.5rem;
-	@media
+
 `;
 export const Thumbnail = styled.div`
 
@@ -154,7 +151,7 @@ export const Stats = styled.div`
   padding-bottom: 0.5rem;
 
   div {
-    margin-right: 0.5rem;
+
 
     b {
       text-transform: capitalize;

@@ -40,7 +40,6 @@ export const Content = styled.div`
   
 
   p {
-    margin-right: 0.5rem;
     padding-bottom: 0.2rem;
   }
 `;
@@ -53,7 +52,7 @@ export const Stats = styled.div`
     display: flex;
 
     &:first-child {
-      margin-right: 0.5rem;
+    
     }
 
     img {

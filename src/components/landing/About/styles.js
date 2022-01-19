@@ -11,8 +11,8 @@ Wrapper = styled.div`
 export const Grid = styled.div`
   display: grid;
   align-items: start;
-  grid-template-columns: repeat(2, 1fr);
-  grid-template-rows: 2fr;
+  grid-template-columns: repeat(2,1fr);
+  grid-template-rows: 1fr;
   gap: 1.2rem 1.2rem;
 
   @media (max-width: 960px) {
@@ -36,8 +36,7 @@ export const SkillsWrapper = styled.div`
 
 export const Details = styled.div`
   flex: 1;
-  padding-right: 2rem;
-  display: block;
+
   @media (max-width: 960px) {
     padding-right: unset;
     width: 100%;
@@ -85,7 +84,8 @@ div.cv{
 `;
 
 export const Recipe = styled.div`
-display: inline-block;
+	font-family: monospace;
+  display: inline-grid;
   @media (max-width: 960px) {
     padding-right: unset;
   }
@@ -106,8 +106,7 @@ display: inline-block;
     color: dimgray;
 
   }
-
-
+	
   span.small {
     margin-bottom: 2.5rem;
     font-size: 10pt;
@@ -127,32 +126,6 @@ display: inline-block;
 
 `;
 
-export const Thumbnail = styled.div`
-  flex-grow: inherit;
-
-  img {
-    @media (max-width: 680px) {
-      width: 80%;
-      margin-right: 10%;
-      margin-left: 10%;
-      align-self: center;
-      flex: content-box;
-    }
-    @media (max-width: 960px) {
-      width: 50%;
-      margin-right: 25%;
-      margin-left: 25%;
-      align-self: center;
-      flex: content-box;
-    }
-    width: 40%;
-    margin-right: 30%;
-    margin-left: 30%;
-    align-self: center;
-    flex: content-box;
-  }
-
-`;
 export const Item = styled.div`
   display: flex;
 

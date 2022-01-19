@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useEffect, useState } from 'react';
 import { useStaticQuery, graphql } from 'gatsby';
 import { Container, Card } from '../../common';
 import starIcon from '../../../assets/icons/star.svg';
@@ -37,6 +37,12 @@ export const SourceCode = () => {
   }
     `,
   );
+  const [stars,setStars]=useState(0);
+  useEffect(() => {
+    fetch('https://api.github.com/repos/vstokstad/vulkan_eng').then(response => response.json()).then(resultData => {
+      setStars(resultData.stargazers_count);
+    });
+  });
   return (
     <Wrapper as={Container} id='sourceCode'>
       <h2>sourceCode <a href={'https://www.github.com/vstokstad'}>github.com/vstokstad</a></h2>
@@ -46,8 +52,6 @@ export const SourceCode = () => {
             key={node.id}
             as='a'
             href={node.url}
-            target='_blank'
-            rel='noopener noreferrer'
           >
             <Card>
               <Content>
