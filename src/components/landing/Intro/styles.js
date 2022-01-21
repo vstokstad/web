@@ -28,7 +28,7 @@ export const Details = styled.div`
     width: 100%;
     margin-bottom: 2rem;
   }
-
+  mix-blend-mode: ${({ theme }) => (theme === 'light' ? 'unset' : 'difference')};
   h1 {
     margin-bottom: 1.5rem;
     font-size: 36pt;
@@ -36,6 +36,9 @@ export const Details = styled.div`
 
     @media (max-width: 680px) {
       font-size: 30pt;
+      mix-blend-mode: ${({ theme }) => (theme === 'light' ? 'unset' : 'difference')};
+    }
+    @media (max-width: 960px) {
       mix-blend-mode: ${({ theme }) => (theme === 'light' ? 'unset' : 'difference')};
     }
   }
@@ -50,6 +53,7 @@ export const Details = styled.div`
 
     @media (max-width: 680px) {
       font-size: 26pt;
+      mix-blend-mode: ${({ theme }) => (theme === 'light' ? 'unset' : 'difference')};
     }
   }
 `;

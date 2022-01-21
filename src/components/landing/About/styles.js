@@ -35,14 +35,14 @@ export const Details = styled.div`
   flex: 1;
 
   @media (max-width: 960px) {
-    padding-right: unset;
+   
     width: 100%;
   }
 
   h1 {
     margin-bottom: 2rem;
     font-size: 26pt;
-
+    mix-blend-mode: ${({ theme }) => (theme === 'light' ? 'unset' : 'difference')};
   }
 
   p {
@@ -69,6 +69,7 @@ export const Details = styled.div`
 
   span {
     font-weight: bolder;
+    mix-blend-mode: ${({ theme }) => (theme === 'light' ? 'unset' : 'difference')};
   }
 
   a.link {
@@ -85,12 +86,9 @@ export const Details = styled.div`
 
 `;
 
-export const Recipe = styled.div`
+export const Skills = styled.div`
   font-family: monospace;
   display: inline-grid;
-  @media (max-width: 960px) {
-    padding-right: unset;
-  }
 
   p {
     margin-bottom: 2.5rem;

@@ -1,6 +1,6 @@
 import React, { useContext } from 'react';
 import { Card, Container } from '../../common';
-import { Details, Recipe, SkillsWrapper, Wrapper, Grid, Item } from './styles';
+import { Details, Skills, SkillsWrapper, Wrapper, Grid, Item } from './styles';
 import { CodeStats } from './CodeStats';
 import { ThemeContext } from '../../../providers/ThemeProvider';
 
@@ -45,7 +45,7 @@ export const About = () => {
           <Grid theme={theme}>
             <Item theme={theme}>
               <Card theme={theme}>
-                <Recipe theme={theme}>
+                <Skills theme={theme}>
                   <h3>
                     Interests and skills
                   </h3>
@@ -57,7 +57,7 @@ export const About = () => {
                     <li>Engines</li>
                     <li>Rendering</li>
                   </ul>
-                </Recipe>
+                </Skills>
               </Card>
             </Item>
             <Item theme={theme}>

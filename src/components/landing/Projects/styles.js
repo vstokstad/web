@@ -2,9 +2,24 @@ import styled from 'styled-components';
 import '@deckdeckgo/highlight-code';
 
 export const Wrapper = styled.div`
-  padding: 2rem 0;
-`;
 
+  
+`;
+export const ProjectsWrapper = styled.div`
+  margin-left: 0;
+  margin-right: 0;
+  @media (min-width: 391px) {
+    margin: 0 auto;
+  }
+  @media (min-width: 601px) {
+    width: 90%;
+    margin: 0 auto;
+  }
+
+  @media (min-width: 993px) {
+    width: 80%;
+    margin: 0 auto;
+`;
 export const Grid = styled.div`
   display: grid;
   align-items: start;
@@ -29,8 +44,6 @@ export const ShowMoreBtn = styled.div`
       text-decoration: underline;
       cursor: pointer;
     }
-    
-
   }
 `;
 
@@ -53,14 +66,10 @@ export const MoreSection = styled.div`
   }
 `;
 export const MoreItem = styled.div`
-
-
   padding-bottom: 0.2rem;
-
   b {
     text-transform: capitalize;
   }
-
   span {
     display: inline-block;
     padding-bottom: 0.2rem;
@@ -80,6 +89,7 @@ export const MoreItem = styled.div`
   }
 `;
 export const Item = styled.div`
+
 h4{
   color: ${({ theme }) => (theme === 'light' ? '#212121' : '#fff')};
 }
@@ -95,8 +105,7 @@ h4{
   }
 `;
 export const Content = styled.div`
-  padding: 1rem 0;
-
+ 
   p {
     display: block;
     padding-bottom: 0.2rem;
@@ -131,6 +140,9 @@ export const Thumbnail = styled.div`
     left: 0;
     width: 100%;
     height: 100%;
+    @media (max-width: 680px){
+      max-width: calc(180vh);
+    }
   }
 `;
 export const Stats = styled.div`
