@@ -26,5 +26,6 @@ lessons:
 isActive: false
 
 hasCode: false
+
 ---
 ```null```

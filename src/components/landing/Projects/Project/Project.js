@@ -48,7 +48,7 @@ export const Project = ({ code, project }) => {
                   <span>{project.lessons}</span>
                   <br />
                 </MoreItem>
-                {project.hasCode === true ?
+                {project.hasCode === true?
                   <MoreItem theme={theme}>
                     <div dangerouslySetInnerHTML={{ __html: code }} />
                     <br />
