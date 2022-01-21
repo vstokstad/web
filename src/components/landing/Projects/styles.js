@@ -3,7 +3,7 @@ import '@deckdeckgo/highlight-code';
 
 export const Wrapper = styled.div`
 
-  
+
 `;
 export const ProjectsWrapper = styled.div`
   margin-left: 0;
@@ -36,6 +36,7 @@ export const Grid = styled.div`
   }
 `;
 export const ShowMoreBtn = styled.div`
+  padding: 1rem;
   h5 {
     float: right;
     text-decoration: underline;
@@ -49,6 +50,7 @@ export const ShowMoreBtn = styled.div`
 
 export const MoreSection = styled.div`
 
+  padding: 1rem;
 
   &.more {
     visibility: visible;
@@ -67,9 +69,11 @@ export const MoreSection = styled.div`
 `;
 export const MoreItem = styled.div`
   padding-bottom: 0.2rem;
+
   b {
     text-transform: capitalize;
   }
+
   span {
     display: inline-block;
     padding-bottom: 0.2rem;
@@ -85,17 +89,19 @@ export const MoreItem = styled.div`
     --deckgo-highlight-code-carbon-overflow: inherit;
     --deckgo-highlight-code-carbon-box-shadow: rgba(0, 0, 0, 0.2) 0 8px 16px;
     --deckgo-highlight-code-container-height: 100%;
-   
+
   }
 `;
 export const Item = styled.div`
 
-h4{
-  color: ${({ theme }) => (theme === 'light' ? '#212121' : '#fff')};
-}
+  h4 {
+    color: ${({ theme }) => (theme === 'light' ? '#212121' : '#fff')};
+  }
+
   p {
     color: ${({ theme }) => (theme === 'light' ? '#707070' : '#c7c7c7')};
   }
+
   .link {
     text-decoration: underline;
 
@@ -104,18 +110,44 @@ h4{
     }
   }
 `;
+export const Card = styled.div`
+  padding: 1rem;
+  @media (max-width: 680px) {
+
+    padding-right: 0;
+    padding-left: 0;
+    margin-right: 0;
+    margin-left: 0;
+    margin-outside: 0;
+    margin-inside: 0;
+
+  }
+  background: #fff;
+  background: ${({ theme }) => (theme === 'light' ? '#fff' : '#181717')};
+  height: 100%;
+  box-shadow: 0 1px 6px 0 rgba(0, 0, 0, 0.11);
+
+  :hover {
+    box-shadow: 0 6px 24px 0 rgba(0, 0, 0, 0.15);
+  }
+`;
 export const Content = styled.div`
- 
+
+  h3 {
+    padding: 1rem;
+  }
+
   p {
     display: block;
     padding-bottom: 0.2rem;
 
   }
 
+
 `;
 export const Description = styled.div`
-  width: 100%;
-  display:block;
+  padding: 1rem;
+  display: block;
   text-align: justify;
   margin-top: 00.5rem;
 
@@ -140,17 +172,17 @@ export const Thumbnail = styled.div`
     left: 0;
     width: 100%;
     height: 100%;
-    @media (max-width: 680px){
-      max-width: calc(180vh);
-    }
+
   }
 `;
 export const Stats = styled.div`
   display: block;
   padding-bottom: 0.5rem;
+
   svg path {
     fill: ${({ theme }) => (theme === 'light' ? '#000' : '#fff')};
   }
+
   div {
 
 

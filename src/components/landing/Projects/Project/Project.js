@@ -1,7 +1,6 @@
 import React, { useContext, useState } from 'react';
 import { ThemeContext } from '../../../../providers/ThemeProvider';
-import { Content, Description, Item, MoreItem, MoreSection, ShowMoreBtn, Stats, Thumbnail } from '../styles';
-import { Card } from '../../../common';
+import { Content, Description, Item, MoreItem, MoreSection, ShowMoreBtn, Stats, Thumbnail,Card } from '../styles';
 import { defineCustomElements as deckDeckGoHighlightElement } from '@deckdeckgo/highlight-code/dist/loader';
 import LazyIframe from '../../../common/LazyIframe';
 

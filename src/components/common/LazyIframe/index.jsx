@@ -35,24 +35,3 @@ const LazyIframe = ({ url, title }) => {
 }
 
 export default LazyIframe;
-
-export const LazyImage = ({ src, title }) => {
-  const containerRef = useRef()
-  const lockRef = useRef(false)
-  const { isIntersecting } = useIntersectionObserver(containerRef)
-  if (isIntersecting) {
-    lockRef.current = true
-  }
-  return (
-    <div
-      ref={containerRef}
-    >
-      {lockRef.current && (
-        <img
-          src={src}
-         alt={title}/>
-      )}
-    </div>
-  )
-}
-;
