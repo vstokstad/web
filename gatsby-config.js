@@ -24,7 +24,7 @@ module.exports = {
 			resolve: `gatsby-source-filesystem`,
 			options: {
 				name: `projects`,
-				path: `${__dirname}/src/components/landing/Projects/Project`,
+				path: `${__dirname}/src/data/projects`,
 			},
 		}, {
 			resolve: `gatsby-transformer-remark`,
