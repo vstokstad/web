@@ -10,12 +10,15 @@ export const Wrapper = styled.button`
     outline: none;
     transition: 0.3s all;
   }
-
   @media (max-width: 960px) {
     text-align: left;
   }
 
-  img {
-    margin-bottom: unset;
-  }
+  margin-bottom: unset;
+  
+  color: ${({ theme }) => (theme === 'light' ? '#000' : '#fff')};
+  
+  mix-blend-mode: ${({ theme }) => (theme === 'light' ? 'unset' : 'difference')};
+  
+
 `;

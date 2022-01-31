@@ -1,8 +1,9 @@
 import React, {useContext} from 'react';
 import AnchorLink from 'react-anchor-link-smooth-scroll';
-import { ThemeContext } from 'providers/ThemeProvider';
 import { Wrapper } from './styles';
-import ToggleTheme from 'components/theme/Header/ToggleTheme';
+import ToggleTheme from '../ToggleTheme';
+import { ThemeContext } from '../../../../providers/ThemeProvider';
+
 
 const NavbarLinks = ({ desktop }) => {
   const { theme } = useContext(ThemeContext);
@@ -13,7 +14,7 @@ const NavbarLinks = ({ desktop }) => {
       <AnchorLink href="#projects">Projects</AnchorLink>
         <AnchorLink href="#sourceCode">SourceCode</AnchorLink>
       <AnchorLink href="#contact">Contact</AnchorLink>
-      <ToggleTheme/>
+      <ToggleTheme theme={theme}/>
     </Wrapper>
   )
 

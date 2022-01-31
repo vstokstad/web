@@ -19,4 +19,5 @@ export const Overlay = styled.div`
 			display: block;
 			z-index: 4;	
 	`}
+  
 `;

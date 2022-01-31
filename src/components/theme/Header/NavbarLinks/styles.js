@@ -7,6 +7,11 @@ export const Wrapper = styled.div`
 
 		@media (max-width: 960px) {
 			color: ${({ theme }) => (theme === 'light' ? '#000' : '#fff')};
+			mix-blend-mode: ${({ theme }) => (theme === 'light' ? 'unset' : 'difference')};
+		}
+		@media (max-width: 960px) {
+			color: ${({ theme }) => (theme === 'light' ? '#000' : '#fff')};
+			mix-blend-mode: ${({ theme }) => (theme === 'light' ? 'unset' : 'difference')};
 		}
   }
 
