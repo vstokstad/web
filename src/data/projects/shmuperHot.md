@@ -11,7 +11,7 @@ img: "./images/GIF/shmuperhot.gif"
 
 link: 
 
-teamSize: "1"
+teamSize: "solo project"
 
 projectTime: "2 weeks"
 

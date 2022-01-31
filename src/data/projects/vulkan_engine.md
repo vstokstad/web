@@ -11,7 +11,7 @@ img: "./images/GIF/vulkan_eng_basic.gif"
 
 link: "https://github.com/vstokstad/vulkan_eng"
 
-teamSize: "1"
+teamSize: "solo project"
 
 projectTime: "3 weeks so far"
 
@@ -23,7 +23,7 @@ myWork: ""
 
 lessons: ""
 
-isActive: true
+isActive: false
 
 hasCode: false
 
