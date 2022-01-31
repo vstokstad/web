@@ -6,19 +6,15 @@ export const Wrapper = styled.div`
 
 `;
 export const ProjectsWrapper = styled.div`
-  margin-left: 0;
-  margin-right: 0;
-  @media (min-width: 391px) {
-    margin: 0 auto;
+  margin-left: auto;
+  margin-right: auto;
+  h2{
+    padding: 0 1rem;
   }
-  @media (min-width: 601px) {
-    width: 90%;
-    margin: 0 auto;
+  @media (max-width: 415px) {
+   width: 100%;
   }
 
-  @media (min-width: 993px) {
-    width: 80%;
-    margin: 0 auto;
 `;
 export const Grid = styled.div`
   display: grid;
@@ -58,8 +54,6 @@ export const MoreSection = styled.div`
     max-height: 2000px;
     transition: visibility 0.4s linear, opacity 0.3s linear, max-height 0.3s linear;
   }
-
-
   &.less {
     opacity: 0;
     visibility: hidden;
@@ -81,15 +75,25 @@ export const MoreItem = styled.div`
 
 
   .deckgo-highlight-code-carbon {
+    
     --deckgo-highlight-code-carbon-toolbar-display: none;
     --deckgo-highlight-code-carbon-display: inherit;
-
+ 
+    --deckgo-highlight-code-carbon-box-shadow: rgba(0, 0, 0, 0.0) 0 0px 0px;
+    
+    --deckgo-highlight-code-carbon-header-button-width: 0;
+    
+    --deckgo-highlight-code-border-radius: 5px;
+    --deckgo-highlight-code-carbon-border-radius: 5px;
+    --deckgo-highlight-code-carbon-margin: 0;
     --deckgo-highlight-code-carbon-header-button-border-radius: 0;
     --deckgo-highlight-code-carbon-header-button-height: 0px;
     --deckgo-highlight-code-carbon-overflow: inherit;
-    --deckgo-highlight-code-carbon-box-shadow: rgba(0, 0, 0, 0.2) 0 8px 16px;
     --deckgo-highlight-code-container-height: 100%;
-
+    --deckgo-highlight-code-container-width: 100%;
+    @media(max-width: 450px){
+      --deckgo-highlight-code-carbon-display: none;
+    }
   }
 `;
 export const Item = styled.div`
@@ -111,17 +115,8 @@ export const Item = styled.div`
   }
 `;
 export const Card = styled.div`
-  padding: 1rem;
-  @media (max-width: 680px) {
+  padding: 0;
 
-    padding-right: 0;
-    padding-left: 0;
-    margin-right: 0;
-    margin-left: 0;
-    margin-outside: 0;
-    margin-inside: 0;
-
-  }
   background: #fff;
   background: ${({ theme }) => (theme === 'light' ? '#fff' : '#181717')};
   height: 100%;
@@ -134,7 +129,7 @@ export const Card = styled.div`
 export const Content = styled.div`
 
   h3 {
-    padding: 1rem;
+    padding-left: 1rem;
   }
 
   p {
@@ -154,6 +149,7 @@ export const Description = styled.div`
 `;
 export const Thumbnail = styled.div`
 
+  
   padding: 56.25% 0 0 0;
   position: relative;
   height: 0;
@@ -173,6 +169,17 @@ export const Thumbnail = styled.div`
     width: 100%;
     height: 100%;
 
+  }
+  @media (max-device-width: 400px)
+  {
+    .video {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 90%;
+      height: 100%;
+
+    }
   }
 `;
 export const Stats = styled.div`

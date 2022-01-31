@@ -36,7 +36,7 @@ export const Projects = () => {
 
   return (
     <>
-      <Wrapper>
+
         <ProjectsWrapper as={Container} id='projects'>
 
           <h2>Projects</h2>
@@ -53,7 +53,7 @@ export const Projects = () => {
           </Grid>
 
         </ProjectsWrapper>
-      </Wrapper>
+
     </>
   );
 };

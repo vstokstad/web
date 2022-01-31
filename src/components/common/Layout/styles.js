@@ -53,7 +53,7 @@ export const Global = createGlobalStyle`
     a:active,
     a:hover {
       outline-width: 0;
-      colo
+   
    
     }
 
@@ -693,6 +693,7 @@ export const Global = createGlobalStyle`
     @media only screen and (max-width: 480px) {
       html {
         font-size: 100%;
+    
       }
     }
 

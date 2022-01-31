@@ -32,7 +32,8 @@ hasCode: true
 ---
 
 ```cpp{}
-enum class EGP_MinionCommand : uint8{
+enum class EGP_MinionCommand:
+ uint8{
 	None = 0,
 	Idle = 1,
 	UnPossess = 2,
