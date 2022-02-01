@@ -17,7 +17,7 @@ export const Project = ({ code, project }) => {
 
     } else {
       thumbnail = <img src={project.img} alt={project.title} />;
-    };
+    }
 
     return (
       <>
@@ -35,7 +35,7 @@ export const Project = ({ code, project }) => {
                   <div><b>Project time:</b> <span>{project.projectTime}</span></div>
                   <div><b>Engine:</b> <span>{project.engine}</span></div>
                   <div><b>Role:</b> <span>{project.role}</span></div>
-                  {project.link != null ? <div><a className='link'
+                  {project.link !== null ? <div><a className='link'
                                                   href={project?.link}>{'Download Game [windows]'}</a></div> : <>
                     <br /></>}
                 </Stats>

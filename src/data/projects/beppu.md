@@ -5,7 +5,6 @@ title: "BEPPUS"
 
 description: "In BEPPUS, a 'Oddworld meets Lemmings' puzzle platformer, you lead a group of Beppus with strange powers. Their world is harsh, and sacrificing some of them will be needed for the others’ salvation."
 
-descriptionLong: "In BEPPUS, a 'Oddworld meets Lemmings' puzzle platformer, you lead a group of Beppus with strange powers. Their world is harsh, and sacrificing some of them will be needed for the others’ salvation. How many can you save? BEPPUS is for players whom want to play a challenging and mind-bending puzzle platformer where levels can be approached in different ways."
 
 video: "https://player.vimeo.com/video/665139096?h=e5226f3683&amp;badge=0&amp;autopause=0&amp;player_id=0&amp;app_id=58479"
 
@@ -27,19 +26,6 @@ lessons: "Do level streaming from the start, don't rework the level structure tw
 
 isActive: true
 
-hasCode: true
+hasCode: false
 
 ---
-
-```cpp{}
-enum class EGP_MinionCommand:
- uint8{
-	None = 0,
-	Idle = 1,
-	UnPossess = 2,
-	Possess = 3,
-	Explode = 4,
-	MoveTo = 5
-};
-
-```

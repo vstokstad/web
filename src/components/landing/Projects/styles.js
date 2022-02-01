@@ -8,6 +8,7 @@ export const Wrapper = styled.div`
 export const ProjectsWrapper = styled.div`
   margin-left: auto;
   margin-right: auto;
+  
   h2{
     padding: 0 1rem;
   }
@@ -24,7 +25,7 @@ export const Grid = styled.div`
   gap: 1.2rem 1.2rem;
 
   @media (max-width: 960px) {
-    grid-template-columns: repeat(1, 1fr);
+    grid-template-columns: repeat(2, 1fr);
   }
 
   @media (max-width: 680px) {
@@ -130,6 +131,7 @@ export const Content = styled.div`
 
   h3 {
     padding-left: 1rem;
+    padding-top: 1rem;
   }
 
   p {

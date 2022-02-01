@@ -9,21 +9,21 @@ video:
 
 img: "./images/GIF/vulkan_eng_basic.gif"
 
-link: "https://github.com/vstokstad/vulkan_eng"
+link:
 
-teamSize: "solo project"
+teamSize: "Solo project"
 
-projectTime: "3 weeks so far"
+projectTime: "Ongoing"
 
-engine: "vulkan, C++, cross-platform"
+engine: "Vulkan, C++, cross-platform"
 
 role: "Programmer"
 
-myWork: ""
+myWork: "In this project I'm trying to learn as much as possible. From setting up and managing a vulkan backend to basic gameplay systems, physics and ECS. I'm using some libraries for some parts, and doing others from scratch."
 
-lessons: ""
+lessons: "Vulkan is a lot of boilerplate, but that also teaches me a lot about how to manage the gpu, memory allocation and timings. It's really fun and not very forgiving. As a whole the project is a pretty good exercise in how to structure projects, abstraction and maintaining an ever-growing codebase."
 
-isActive: false
+isActive: true
 
 hasCode: false
 

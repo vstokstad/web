@@ -25,7 +25,7 @@ lessons: "Mobile UI is hard to get right. Porting to mobile is less about gettin
 
 isActive: true
 
-hasCode: true
+hasCode: false
 
 ---
 ```csharp{12-18}
