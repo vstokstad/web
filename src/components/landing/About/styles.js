@@ -35,7 +35,7 @@ export const Details = styled.div`
   flex: 1;
 
   @media (max-width: 960px) {
-   
+
     width: 100%;
   }
 
@@ -127,7 +127,23 @@ export const Skills = styled.div`
 `;
 
 export const Item = styled.div`
+
   display: flex;
+  
+  .backsidecard {
+    width: 13rem;
+    transition: all 1s;
+
+    :hover {
+      cursor: pointer;
+    }
+  }
+
+  div {
+    width: 13rem;
+
+  }
+
 
   h4 {
     color: ${({ theme }) => (theme === 'light' ? '#212121' : '#fff')};

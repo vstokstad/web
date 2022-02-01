@@ -1,11 +1,14 @@
-import React, { useContext } from 'react';
+import React, { useContext, useState } from 'react';
 import { Card, Container } from '../../common';
 import { Details, Skills, SkillsWrapper, Wrapper, Grid, Item } from './styles';
 import { CodeStats } from './CodeStats';
 import { ThemeContext } from '../../../providers/ThemeProvider';
+import contact from '../../../assets/illustrations/contact.svg';
+
 
 export const About = () => {
   const { theme } = useContext(ThemeContext);
+  const [stats, setStats] = useState(false);
   return (
     <Wrapper id='about'>
       <SkillsWrapper as={Container}>
@@ -19,7 +22,7 @@ export const About = () => {
           <div className='more'>
             <div>
               I do most parts of game dev, but I am especially interested in <span
-              >Gameplay</span> , <span>AI</span> and general <span>Engine</span> work.
+            >Gameplay</span> , <span>AI</span> and general <span>Engine</span> work.
               I guess I like having structure but also making code <span className='keyword'>structured</span>.
               The <span
               className='keyword'>creative</span> aspects of programming really speak to me, one person's way to solve a
@@ -38,8 +41,9 @@ export const About = () => {
               here.</a>
             </div>
             <br />
-            <h3>Here is my   <a className='link'
-              href='https://docs.google.com/document/d/e/2PACX-1vQT-OOXMW_mlcF88uGglZ2Lh73qUfDNe0cnM67uftgwYaSjXpPIWGmZJDMDx90aPM5zSpBJlwrnPauO/pub'>CV.</a>
+            <h3><a className='link'
+                   href='https://docs.google.com/document/d/e/2PACX-1vQT-OOXMW_mlcF88uGglZ2Lh73qUfDNe0cnM67uftgwYaSjXpPIWGmZJDMDx90aPM5zSpBJlwrnPauO/pub'>Here
+              is my CV.</a>
             </h3>
           </div>
           <Grid theme={theme}>
@@ -53,16 +57,22 @@ export const About = () => {
                     <li>Gameplay</li>
                     <li>AI & Behaviour</li>
                     <li>Systems</li>
-                    <li>Network</li>
                     <li>Engines</li>
-                    <li>Rendering</li>
+                    <li>Network</li>
                   </ul>
                 </Skills>
               </Card>
             </Item>
             <Item theme={theme}>
-              <Card theme={theme}>
-                <CodeStats theme={theme} />
+              <Card theme={theme} onClick={() => {
+                setStats(!stats);
+              }}>
+
+                  {stats === false ?
+                    <img src={contact} alt={'Vilhelm Stokstad'} className={"backsidecard"} /> :
+                    <CodeStats theme={theme} className={"backsidecard"} />
+                  }
+
               </Card>
             </Item>
           </Grid>
