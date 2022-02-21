@@ -14,11 +14,12 @@ import {
 } from '../styles';
 import { defineCustomElements as deckDeckGoHighlightElement } from '@deckdeckgo/highlight-code/dist/loader';
 import LazyIframe from '../../../common/LazyIframe';
+import AnchorLink from 'react-anchor-link-smooth-scroll/lib/anchor-link';
 
 deckDeckGoHighlightElement();
 
 
-export const Project = ({ code, project }) => {
+export const Project = ({ code, project, id }) => {
     const { theme } = useContext(ThemeContext);
     const [more, setMore] = useState('less');
     let thumbnail;
@@ -32,7 +33,7 @@ export const Project = ({ code, project }) => {
 
     return (
       <>
-        <Item theme={theme}>
+        <Item theme={theme} id={id}>
           <Card theme={theme}>
             <Content theme={theme}>
               <h3>{project.title}</h3>
@@ -40,12 +41,11 @@ export const Project = ({ code, project }) => {
               <Description>
                 <p>{project.description}</p>
               </Description>
-              <MoreSection className={more} class={"container"} theme={theme}>
+              <MoreSection className={more} theme={theme}>
                 <Stats theme={theme}>
-
-                  {project.link !== null ? <div><a className='link'
-                                                   href={project?.link}>{'Link'}</a></div> : <>
-                    <br /></>}
+                  {project.link !== null ?
+                    <div><a className='link' href={project.link}>{'Link'}</a></div> :
+                    <><br /></>}
                   <div><b>Team size:</b> <span>{project.teamSize}</span></div>
                   <div><b>Project time:</b> <span>{project.projectTime}</span></div>
                   <div><b>Engine:</b> <span>{project.engine}</span></div>
@@ -73,8 +73,8 @@ export const Project = ({ code, project }) => {
 
               <ShowMoreBtn theme={theme} onClick={() => more === 'more' ? setMore('less') : setMore('more')}>
                 {more === 'less' ?
-                  <h5>show more</h5> :
-                  <h5>hide</h5>}
+                  <AnchorLink href={'#'+id}><h5>show more</h5></AnchorLink> :
+                  <AnchorLink href={'#'+id}> <h5>hide</h5></AnchorLink>}
               </ShowMoreBtn>
             </Content>
 

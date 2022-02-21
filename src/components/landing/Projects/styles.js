@@ -45,9 +45,7 @@ export const ShowMoreBtn = styled.div`
 `;
 
 export const MoreSection = styled.div`
-
-
-
+  
   &.more {
     visibility: visible;
     opacity: 1;
@@ -95,7 +93,6 @@ export const CodeItem = styled.div`
   
     --deckgo-highlight-code-carbon-toolbar-display: none;
     --deckgo-highlight-code-carbon-display: inherit;
-    --deckgo-highlight-code-carbon-visibility: inherit;
     --deckgo-highlight-code-carbon-box-shadow: rgba(0, 0, 0, 0.0) 0 0px 0px;
 
     --deckgo-highlight-code-carbon-header-button-width: 0;

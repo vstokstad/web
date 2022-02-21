@@ -45,7 +45,7 @@ export const Projects = () => {
       <Grid>
         {data.all.nodes.map((node, index) => {
           return (
-            <Project project={node.frontmatter} code={node.html} key={index} />
+            <Project project={node.frontmatter} code={node.html} key={index} id={node.frontmatter.title} />
           );
 
         })}
