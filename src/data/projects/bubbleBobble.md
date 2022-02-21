@@ -3,6 +3,8 @@ slug: "/projects/bobble-evolution"
 
 title: "Bobble Evolution"
 
+sortOrder: 99
+
 description: "School group assignment to do a 3D game based on a 2D classic. In Bubble Evolution you are a little sea creature trying to get to the top of a tower. To your help you have the ability to shoot bubbles, which you can jump onto, dash through and shoot at enemies to capture them."
 
 video: "https://www.youtube-nocookie.com/embed/J_kOex71fDo"

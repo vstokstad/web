@@ -3,6 +3,8 @@ slug: "/projects/beppu"
 
 title: "BEPPUS"
 
+sortOrder: 1
+
 description: "In BEPPUS, a 'Oddworld meets Lemmings' puzzle platformer, you lead a group of Beppus with strange powers. Their world is harsh, and sacrificing some of them will be needed for the others’ salvation."
 
 
@@ -26,6 +28,46 @@ lessons: "Do level streaming from the start, don't rework the level structure tw
 
 isActive: true
 
-hasCode: false
+hasCode: true
 
 ---
+```cpp{0-30}
+void AGP_PatrollingAIController::HandleMove(){
+	CurrentDirection.X = 0.f;
+	if ( !bIsPausing ){
+		Minion->HandleRightInput(CurrentDirection.Y);
+		FVector TraceStart = GetPawn()->GetPawnViewLocation() + CurrentDirection * 20.f;
+		FVector TraceEnd = TraceStart + CurrentDirection * TraceLength;
+		FHitResult Hit;
+		if ( GetWorld()->LineTraceSingleByObjectType(Hit, TraceStart, TraceEnd, COQP) ){
+			if ( Hit.bBlockingHit ){
+				AGP_PuzzlePiece_Portal* Portal = Cast<AGP_PuzzlePiece_Portal>(Hit.GetActor());
+				if ( Portal || Minion->IsTeleporting == true )
+					return;
+				TurnAround();
+				return;
+			}
+		}
+		else{
+			TraceStart.Z -= SecondTraceHeightOffset;
+			TraceEnd = TraceStart + CurrentDirection * (TraceLength * 0.4f);
+			if ( GetWorld()->LineTraceSingleByObjectType(Hit, TraceStart, TraceEnd, COQP) ){
+				if ( Hit.bBlockingHit ){
+					AGP_PuzzlePiece_Portal* Portal = Cast<AGP_PuzzlePiece_Portal>(Hit.GetActor());
+					if ( Portal )
+						return;
+					TurnAround();
+					return;
+				}
+			}
+		}
+	}
+	if ( !GetPawn<AGP_Minion>()->GetIsGrounded() && !bIsPausing ){
+		PauseMove(CurrentDirection);
+		return;
+	}
+	if
+	( GetPawn<AGP_Minion>()->GetIsGrounded() && bIsPausing ){
+		ResumeMove(CurrentDirection);
+	}
+}

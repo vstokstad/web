@@ -8,12 +8,13 @@ export const Wrapper = styled.div`
 export const ProjectsWrapper = styled.div`
   margin-left: auto;
   margin-right: auto;
-  
-  h2{
+
+  h2 {
     padding: 0 1rem;
   }
-  @media (max-width: 415px) {
-   width: 100%;
+
+  @media (max-width: 480px) {
+    width: 100%;
   }
 
 `;
@@ -25,15 +26,13 @@ export const Grid = styled.div`
   gap: 1.2rem 1.2rem;
 
   @media (max-width: 960px) {
-    grid-template-columns: repeat(2, 1fr);
-  }
-
-  @media (max-width: 680px) {
     grid-template-columns: 1fr;
   }
+  
 `;
 export const ShowMoreBtn = styled.div`
   padding: 1rem;
+
   h5 {
     float: right;
     text-decoration: underline;
@@ -47,7 +46,7 @@ export const ShowMoreBtn = styled.div`
 
 export const MoreSection = styled.div`
 
-  padding: 1rem;
+
 
   &.more {
     visibility: visible;
@@ -55,15 +54,33 @@ export const MoreSection = styled.div`
     max-height: 2000px;
     transition: visibility 0.4s linear, opacity 0.3s linear, max-height 0.3s linear;
   }
+
   &.less {
     opacity: 0;
     visibility: hidden;
     max-height: 0;
     transition: visibility 0.4s linear, opacity 0.3s linear, max-height 0.3s linear;
+
+    .deckgo-highlight-code-carbon {
+      --deckgo-highlight-code-carbon-display: none;
+    }
   }
+
 `;
 export const MoreItem = styled.div`
-  padding-bottom: 0.2rem;
+  padding: 1rem 1rem 0.2rem;
+
+  b {
+    text-transform: capitalize;
+  }
+
+  span {
+    display: inline-block;
+    padding-bottom: 0.2rem;
+  }
+`;
+export const CodeItem = styled.div`
+  padding: 0 0 0.2rem;
 
   b {
     text-transform: capitalize;
@@ -74,29 +91,32 @@ export const MoreItem = styled.div`
     padding-bottom: 0.2rem;
   }
 
-
   .deckgo-highlight-code-carbon {
-    
+    padding: 0;
+    margin: 0;
     --deckgo-highlight-code-carbon-toolbar-display: none;
     --deckgo-highlight-code-carbon-display: inherit;
- 
+    --deckgo-highlight-code-carbon-visibility: inherit;
     --deckgo-highlight-code-carbon-box-shadow: rgba(0, 0, 0, 0.0) 0 0px 0px;
-    
+
     --deckgo-highlight-code-carbon-header-button-width: 0;
-    
-    --deckgo-highlight-code-border-radius: 5px;
-    --deckgo-highlight-code-carbon-border-radius: 5px;
+
+    --deckgo-highlight-code-border-radius: 0px;
+    --deckgo-highlight-code-carbon-border-radius: 0px;
     --deckgo-highlight-code-carbon-margin: 0;
+    --deckgo-highlight-code-margin: 0;
+    --deckgo-highlight-code-padding: 1rem;
     --deckgo-highlight-code-carbon-header-button-border-radius: 0;
     --deckgo-highlight-code-carbon-header-button-height: 0px;
-    --deckgo-highlight-code-carbon-overflow: inherit;
+    --deckgo-highlight-code-carbon-overflow: auto;
     --deckgo-highlight-code-container-height: 100%;
-    --deckgo-highlight-code-container-width: 100%;
-    @media(max-width: 450px){
+    --deckgo-highlight-code-container-width: content;
+
+    @media (max-width: 480px) {
       --deckgo-highlight-code-carbon-display: none;
     }
-  }
-`;
+
+`
 export const Item = styled.div`
 
   h4 {
@@ -151,7 +171,7 @@ export const Description = styled.div`
 `;
 export const Thumbnail = styled.div`
 
-  
+
   padding: 56.25% 0 0 0;
   position: relative;
   height: 0;
@@ -172,8 +192,8 @@ export const Thumbnail = styled.div`
     height: 100%;
 
   }
-  @media (max-device-width: 400px)
-  {
+
+  @media (max-device-width: 400px) {
     .video {
       position: absolute;
       top: 0;
@@ -186,7 +206,7 @@ export const Thumbnail = styled.div`
 `;
 export const Stats = styled.div`
   display: block;
-  padding-bottom: 0.5rem;
+  padding: 1rem 1rem 0.5rem;
 
   svg path {
     fill: ${({ theme }) => (theme === 'light' ? '#000' : '#fff')};

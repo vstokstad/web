@@ -1,6 +1,17 @@
 import React, { useContext, useState } from 'react';
 import { ThemeContext } from '../../../../providers/ThemeProvider';
-import { Content, Description, Item, MoreItem, MoreSection, ShowMoreBtn, Stats, Thumbnail,Card } from '../styles';
+import {
+  Content,
+  Description,
+  Item,
+  MoreItem,
+  MoreSection,
+  ShowMoreBtn,
+  Stats,
+  Thumbnail,
+  Card,
+  CodeItem,
+} from '../styles';
 import { defineCustomElements as deckDeckGoHighlightElement } from '@deckdeckgo/highlight-code/dist/loader';
 import LazyIframe from '../../../common/LazyIframe';
 
@@ -27,17 +38,19 @@ export const Project = ({ code, project }) => {
               <h3>{project.title}</h3>
               <Thumbnail children={thumbnail} />
               <Description>
-                <p>{project.description}</p>
+
               </Description>
-              <MoreSection className={more} theme={theme}>
+              <MoreSection className={more} class={"container"} theme={theme}>
                 <Stats theme={theme}>
+                  <p>{project.description}</p>
+                  {project.link !== null ? <div><a className='link'
+                                                   href={project?.link}>{'Link'}</a></div> : <>
+                    <br /></>}
                   <div><b>Team size:</b> <span>{project.teamSize}</span></div>
                   <div><b>Project time:</b> <span>{project.projectTime}</span></div>
                   <div><b>Engine:</b> <span>{project.engine}</span></div>
                   <div><b>Role:</b> <span>{project.role}</span></div>
-                  {project.link !== null ? <div><a className='link'
-                                                  href={project?.link}>{'Download Game [windows]'}</a></div> : <>
-                    <br /></>}
+
                 </Stats>
                 <MoreItem theme={theme}>
                   <b>My Work:</b>
@@ -49,10 +62,10 @@ export const Project = ({ code, project }) => {
                   <br />
                 </MoreItem>
                 {project.hasCode === true?
-                  <MoreItem theme={theme}>
+                  <CodeItem theme={theme}>
                     <div dangerouslySetInnerHTML={{ __html: code }} />
                     <br />
-                  </MoreItem> :
+                  </CodeItem> :
                   <></>
                 }
               </MoreSection>

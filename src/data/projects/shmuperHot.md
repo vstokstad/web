@@ -3,6 +3,8 @@ slug: "/projects/suboptimal"
 
 title: "ShmuperHot"
 
+sortOrder: 4
+
 description: "Space Shoot'Em Up mini-game with heavy inspiration from Super Hot in regard to time dilation and slow-motion. Developed as an assignment at Future Games, then ported to Mobile (iOS) through Unity as a side project."
 
 video: 
@@ -25,7 +27,7 @@ lessons: "Mobile UI is hard to get right. Porting to mobile is less about gettin
 
 isActive: true
 
-hasCode: false
+hasCode: true
 
 ---
 ```csharp{12-18}

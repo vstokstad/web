@@ -3,6 +3,8 @@ slug: "/projects/unseen"
 
 title: "The Unseen"
 
+sortOrder: 2
+
 description: "The Unseen is a first person horror/survival game. You enter an underground water treatment facility as a mechanic. Equipped with only the standard issue multi-tool you set out to fix the issues all over the plant. But something lurks in the shadows."
 
 video: "https://player.vimeo.com/video/665139150?h=29507d2aad&amp;badge=0&amp;autopause=0&amp;player_id=0&amp;app_id=58479"

@@ -26,6 +26,7 @@ exports.createSchemaCustomization = ({ actions }) => {
     }
     type Frontmatter {
       description: String
+      sortOrder: Int
       engine: String
       img: String
       role: String

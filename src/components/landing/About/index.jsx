@@ -15,27 +15,23 @@ export const About = () => {
         <Details theme={theme}>
           <h1>About</h1>
           <p className='maintext'>
-            I am a game programmer currently studying at Future Games and I am looking for an internship from May
-            through
-            December 2022!
+            Hi! I'm Vilhelm and I am a game programmer.
           </p>
           <div className='more'>
             <div>
               I do most parts of game dev, but I am especially interested in <span
-            >Gameplay</span> , <span>AI</span> and general <span>Engine</span> work.
-              I guess I like having structure but also making code <span className='keyword'>structured</span>.
-              The <span
-              className='keyword'>creative</span> aspects of programming really speak to me, one person's way to solve a
-              problem will never be the same as another's.
+            >Gameplay</span> and <span>Engines</span>, which often includes some <span>AI</span> work.
+             I like having structure and making <span className='keyword'>structured</span> code.
+              The <span className='keyword'>creative</span> aspects of programming really speak to me, one person's way to solve a
+              problem will never be the same as another.
               I value <span className='keyword'>teamwork</span> as one of the most important ingredients to create great
-              things but I won't shy away from bashing my head into a problem to solve it, while also being aware of my
-              own limitations and asking for help when i need it.
+              things but I won't shy away from bashing my head into a problem to solve it (mostly that mean's i enjoy learning new things and will dig in to whatever topic i am working on).
+              I am experienced enough to be aware of my own limitations and ask for help when i need it.
             </div>
             <br />
             <div>
               Before studying programming, I was a freelance documentary photographer / visual storyteller. Other than
-              covering general news in
-              Sweden I was reporting from countries such as Syria, Myanmar, Indonesia, Iraq.
+              covering general news in Sweden I was reporting from countries such as Syria, Myanmar, Indonesia, Iraq.
               If you are interested, some of my photographic work can be <a className='link'
                                                                             href='https://visura.co/stokstad'>seen
               here.</a>
@@ -56,9 +52,9 @@ export const About = () => {
                   <ul>
                     <li>Gameplay</li>
                     <li>AI & Behaviour</li>
-                    <li>Systems</li>
+
                     <li>Engines</li>
-                    <li>Network</li>
+                    <li>Systems</li>
                   </ul>
                 </Skills>
               </Card>
