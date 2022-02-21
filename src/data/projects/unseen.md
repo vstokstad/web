@@ -32,6 +32,26 @@ lot easier to be a bit more specific in code about which objects should be highl
 
 isActive: true
 
-hasCode: false
+hasCode: true
 
 ---
+```cpp
+//This should only happen once per move;
+	if (Enemy->bHasRequestedLocation) { if (FVector::Dist(Enemy->GetActorLocation(), Enemy->RequestedLocation) < 5.f) { OnArrivedAtTargetDestination(); } }
+
+	//SCREEN DISTORTION EFFECT IF PLAYER IS CLOSE//
+	float DistanceToPlayer = Enemy->GetDistanceToPlayer();
+	Enemy->AggressionLevel = FMath::Clamp(Enemy->AggressionLevel, 0.001f, 1.f);
+	if (DistanceToPlayer <= AISightRadius) { ScreenPixelEffectAmount += FMath::Lerp(0.f, 1.f, Enemy->AggressionLevel); }
+	else { ScreenPixelEffectAmount -= FMath::Lerp(0.f, 1.0f, Enemy->AggressionLevel); }
+	ScreenPixelEffectAmount = FMath::Sin(ScreenPixelEffectAmount * DeltaSeconds);
+	UKismetMaterialLibrary::SetScalarParameterValue(this, PixelSortParameterCollection, FName("AlphaClamp"), ScreenPixelEffectAmount);
+
+	//CHECK IF IS IDLE//
+	if (StateMachine->GetState() == EEnemyState::IDLE) { IdleTimer += DeltaSeconds; }
+	if (IdleTimer >= MaxIdleTime) {
+		SetAILogicActive(true);
+		PlayerLastKnownPosition = GetPoint(true)->GetActorLocation();
+		StateMachine->SetState(EEnemyState::SEARCHING);
+		IdleTimer = 0.f;
+	}

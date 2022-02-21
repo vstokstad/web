@@ -25,7 +25,7 @@ export const Grid = styled.div`
   grid-template-rows: 8fr;
   gap: 1.2rem 1.2rem;
 
-  @media (max-width: 960px) {
+  @media (max-width: 1280px) {
     grid-template-columns: 1fr;
   }
   
@@ -92,8 +92,7 @@ export const CodeItem = styled.div`
   }
 
   .deckgo-highlight-code-carbon {
-    padding: 0;
-    margin: 0;
+  
     --deckgo-highlight-code-carbon-toolbar-display: none;
     --deckgo-highlight-code-carbon-display: inherit;
     --deckgo-highlight-code-carbon-visibility: inherit;

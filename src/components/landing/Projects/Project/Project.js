@@ -38,11 +38,11 @@ export const Project = ({ code, project }) => {
               <h3>{project.title}</h3>
               <Thumbnail children={thumbnail} />
               <Description>
-
+                <p>{project.description}</p>
               </Description>
               <MoreSection className={more} class={"container"} theme={theme}>
                 <Stats theme={theme}>
-                  <p>{project.description}</p>
+
                   {project.link !== null ? <div><a className='link'
                                                    href={project?.link}>{'Link'}</a></div> : <>
                     <br /></>}
